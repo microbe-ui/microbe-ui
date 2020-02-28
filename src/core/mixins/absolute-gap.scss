@@ -1,0 +1,16 @@
+////
+/// @group core
+////
+
+/// @param {Number} $x - top & bottom
+/// @param {Number} $y - left & right
+/// @param {Bool} $set-absolute [true]
+@mixin _microbe-absolute-gap($x, $y: $x, $set-absolute: true) {
+	@if ($set-absolute) {
+		position: absolute;
+	}
+	top: $x;
+	right: $y;
+	bottom: $x;
+	left: $y;
+}

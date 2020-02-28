@@ -1,0 +1,9 @@
+$microbe-space-xxs: 2px !default;
+$microbe-space-xs: 4px !default;
+$microbe-space-sm: 6px !default;
+
+$__microbe-spaces: (
+	xxl: $microbe-space-xxs,
+	xs: $microbe-space-xs,
+	sm: $microbe-space-sm
+);

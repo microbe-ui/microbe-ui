@@ -1,0 +1,63 @@
+{
+  "name": "microbe-ui",
+  "version": "0.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "dev": "gulp sass && gulp watch",
+    "test": "npm run prettier && npm run stylelint",
+    "fix": "npm run prettier -- --write && npm run stylelint -- --fix",
+    "build": "gulp sass",
+    "prettier": "prettier \"src/**/*.scss\" --check",
+    "stylelint": "stylelint \"src/**/*.scss\""
+  },
+  "stylelint": {
+    "extends": [
+      "stylelint-config-recommended-scss",
+      "stylelint-prettier/recommended"
+    ],
+    "rules": {
+      "declaration-no-important": null,
+      "keyframe-declaration-no-important": true,
+      "selector-max-id": 0,
+      "selector-max-universal": null
+    }
+  },
+  "prettier": {
+    "arrowParens": "always",
+    "bracketSpacing": true,
+    "printWidth": 90,
+    "semi": true,
+    "singleQuote": true,
+    "trailingComma": "none",
+    "tabWidth": 4,
+    "useTabs": true
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/microbe-ui/microbe-ui.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/microbe-ui/microbe-ui/issues"
+  },
+  "homepage": "https://github.com/microbe-ui/microbe-ui#readme",
+  "devDependencies": {
+    "browser-sync": "^2.26.7",
+    "gulp": "^4.0.2",
+    "gulp-notify": "^3.2.0",
+    "gulp-postcss": "^8.0.0",
+    "gulp-sass": "^4.0.2",
+    "node-sass": "^4.13.1",
+    "postcss-sort-media-queries": "^1.31.21",
+    "prettier": "^1.19.1",
+    "sort-css-media-queries": "^1.5.0",
+    "stylelint": "^13.2.0",
+    "stylelint-config-prettier": "^8.0.1",
+    "stylelint-config-recommended-scss": "^4.2.0",
+    "stylelint-prettier": "^1.1.2",
+    "stylelint-scss": "^3.14.2"
+  }
+}

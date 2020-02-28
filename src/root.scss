@@ -1,0 +1,9 @@
+@import 'core';
+
+:root {
+	@each $space, $value in $__microbe-spaces {
+		@if $value != null {
+			--microbe-space-xxl: #{$value};
+		}
+	}
+}

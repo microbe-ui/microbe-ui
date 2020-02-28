@@ -1,0 +1,31 @@
+////
+/// @group _settings/
+////
+
+/// @param {Number|Keyword} $breakpoint - {number} | print | landscape | portrait
+/// @param {Keyword} $direction [min] - min | max
+/// @param {Keyword} $dimension [width] - width | height | device-width | device-height
+@mixin _microbe-media($breakpoint, $direction: min, $dimension: width) {
+	$corrector: 0;
+
+	@if $direction == max {
+		$corrector: -1;
+	}
+
+	@if type-of($breakpoint) == number {
+		$dir: #{$direction + '-' + $dimension};
+		@media only screen and ($dir: $breakpoint + $corrector) {
+			@content;
+		}
+	} @else {
+		@if $breakpoint == landscape OR $breakpoint == portrait {
+			@media (orientation: #{$breakpoint}) {
+				@content;
+			}
+		} @else {
+			@media #{$breakpoint} {
+				@content;
+			}
+		}
+	}
+}
