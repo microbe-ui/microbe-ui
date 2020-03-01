@@ -1,9 +1,37 @@
-$microbe-space-xxs: 2px !default;
-$microbe-space-xs: 4px !default;
-$microbe-space-sm: 6px !default;
+@import './functions/rem';
 
-$__microbe-spaces: (
-	xxl: $microbe-space-xxs,
-	xs: $microbe-space-xs,
-	sm: $microbe-space-sm
-);
+/// space size _xxs_ (xx-small)
+/// @group core/defaults#microbe-space-xxs
+$microbe-space-xxs: rem(2) !default;
+
+/// space size _xs_ (x-small)
+/// @group core/defaults#microbe-space-xs
+$microbe-space-xs: rem(4) !default;
+
+/// space size _sm_ (small)
+/// @group core/defaults#microbe-space-sm
+$microbe-space-sm: rem(8) !default;
+
+/// space size _md_ (medium)
+/// @group core/defaults#microbe-space-md
+$microbe-space-md: rem(12) !default;
+
+/// space size _df_ (default)
+/// @group core/defaults#microbe-space-df
+$microbe-space-df: rem(16) !default;
+
+/// space size _lg_ (large)
+/// @group core/defaults#microbe-space-lg
+$microbe-space-lg: rem(24) !default;
+
+/// space size _xlg_ (x-large)
+/// @group core/defaults#microbe-space-xlg
+$microbe-space-xlg: rem(32) !default;
+
+/// space size _xxl_ (xx-large)
+/// @group core/defaults#microbe-space-xxl
+$microbe-space-xxl: rem(48) !default;
+
+/// space size _hg_ (huge)
+/// @group core/defaults#microbe-space-hg
+$microbe-space-hg: rem(80) !default;

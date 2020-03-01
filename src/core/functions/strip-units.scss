@@ -1,0 +1,15 @@
+/// Get `unitless` value (trim units)
+/// @group core/functions#strip-units
+/// @param {Size} $value
+/// @return {Number} trimmed value
+/// @example
+///   strip-units(10px) //  10
+///   strip-units(20rem) // 20
+///   strip-units(5vw) //   5
+@function strip-units($value) {
+	@if type-of($value) == 'number' and not unitless($value) {
+		@return $value / ($value * 0 + 1);
+	} @else {
+		@return $value;
+	}
+}
