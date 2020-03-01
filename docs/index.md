@@ -1,5 +1,22 @@
 # Hello
 
+## Table of content
+
+1. [Functions](#functions)
+    1. [microbe-strip-units](#microbe-strip-units)
+    1. [microbe-em](#microbe-em)
+    1. [microbe-rem](#microbe-rem)
+1. [Mixins](#mixins)
+    1. [microbe-absolute-center](#microbe-absolute-center)
+    1. [microbe-absolute-gap](#microbe-absolute-gap)
+    1. [microbe-absolute-square](#microbe-absolute-square)
+    1. [microbe-flex-cell-width](#microbe-flex-cell-width)
+    1. [microbe-media](#microbe-media)
+1. [Variables](#variables)
+    1. [spaces](#spaces)
+
+---****
+
 ## Functions
 
 ### `microbe-strip-units()`
@@ -11,7 +28,7 @@ Get `unitless` value (trim units)
 
 | Name | Description | Type | Default value |
 | --- | --- | --- | --- |
-| value | --- | `Size` | --- |
+| `value` | --- | `Size` | --- |
 
 ##### Returns
 
@@ -38,8 +55,8 @@ Convert a pixel value to the `em` value
 
 | Name | Description | Type | Default value |
 | --- | --- | --- | --- |
-| value | pixel value, units are optional | `Number` | --- |
-| base | base value for calculations | `Number` | `16` |
+| `value` | pixel value, units are optional | `Number` | --- |
+| `base` | base value for calculations | `Number` | `16` |
 
 ##### Returns
 
@@ -65,8 +82,8 @@ Convert a pixel value to the `rem` value
 
 | Name | Description | Type | Default value |
 | --- | --- | --- | --- |
-| value | pixel value, units are optional | `Number` | --- |
-| base | base value for calculations | `Number` | `16` |
+| `value` | pixel value, units are optional | `Number` | --- |
+| `base` | base value for calculations | `Number` | `16` |
 
 ##### Returns
 
@@ -93,9 +110,9 @@ microbe-rem(40, 20px) // 2rem
 
 | Name | Description | Type | Default value |
 | --- | --- | --- | --- |
-| width | --- | `Size` | --- |
-| height | --- | `Size` | `$width` |
-| set-absolute | --- | `Bool` | `true` |
+| `$width` | --- | `Size` | --- |
+| `$height` | --- | `Size` | `$width` |
+| `$set-absolute` | --- | `Bool` | `true` |
 
 ##### Examples
 
@@ -126,9 +143,9 @@ microbe-rem(40, 20px) // 2rem
 
 | Name | Description | Type | Default value |
 | --- | --- | --- | --- |
-| x | top & bottom | `Number` | --- |
-| y | left & right | `Number` | --- |
-| set-absolute | --- | `Bool` | `true` |
+| `$x` | top & bottom | `Number` | --- |
+| `$y` | left & right | `Number` | --- |
+| `$set-absolute` | --- | `Bool` | `true` |
 
 ##### Examples
 
@@ -160,8 +177,8 @@ microbe-rem(40, 20px) // 2rem
 
 | Name | Description | Type | Default value |
 | --- | --- | --- | --- |
-| percent | --- | `Number` | --- |
-| set-absolute | --- | `Bool` | `true` |
+| `$percent` | --- | `Number` | --- |
+| `$set-absolute` | --- | `Bool` | `true` |
 
 ##### Examples
 
@@ -193,7 +210,7 @@ microbe-rem(40, 20px) // 2rem
 
 | Name | Description | Type | Default value |
 | --- | --- | --- | --- |
-| width | cell size | `Size` | --- |
+| `$width` | cell size | `Size` | --- |
 
 ---
 
@@ -206,9 +223,9 @@ Generate `@media` queries with content
 
 | Name | Description | Type | Default value |
 | --- | --- | --- | --- |
-| breakpoint | number / print / landscape / portrait | `Number / Keyword` | --- |
-| direction | min / max | `Keyword` | `min` |
-| dimension | width / height / device-width / device-height | `Keyword` | `width` |
+| `$breakpoint` | number / print / landscape / portrait | `Number / Keyword` | --- |
+| `$direction` | min / max | `Keyword` | `min` |
+| `$dimension` | width / height / device-width / device-height | `Keyword` | `width` |
 
 ##### Examples
 
