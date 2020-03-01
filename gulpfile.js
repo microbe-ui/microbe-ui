@@ -94,13 +94,14 @@ const generateMarkdownDocs = () => {
 
 		const parameters = doc.parameter;
 		if (Array.isArray(parameters) && parameters.length) {
+			const v = doc.context.type === 'mixin' ? '$' : '';
 			info.push(
 				'##### Parameters',
 				generateTable(
 					['Name', 'Description', 'Type', 'Default value'],
 					...parameters.map(({ type, name, description, default: def }) => {
 						return [
-							name,
+							mdCode(v + name),
 							description || '---',
 							mdCode(type),
 							def !== undefined ? mdCode(def) : '---'
@@ -148,7 +149,7 @@ const generateMarkdownDocs = () => {
 	};
 
 	return gulp
-		.src('./docs-src/**/*.md')
+		.src('./src/docs/**/*.md')
 		.on('data', (file) => {
 			const content = file._contents.toString();
 			file._contents = Buffer.from(
