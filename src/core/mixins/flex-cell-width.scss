@@ -1,10 +1,7 @@
-////
-/// @group core
-////
-
+/// @group core/mixins#microbe-flex-cell-width
 /// @param {Size} $width - cell size
 /// @param {Keyword} [$direction=max] - max | min
-@mixin _microbe-flex-cell-width($width, $direction: max) {
+@mixin microbe-flex-cell-width($width, $direction: max) {
 	flex-basis: $width;
 	width: $width;
 	@if ($width == auto) {

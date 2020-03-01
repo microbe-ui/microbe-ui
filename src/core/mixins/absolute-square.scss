@@ -1,24 +1,21 @@
-////
-/// @group core
-////
-
+/// @group core/mixins#microbe-absolute-square
 /// @param {Number} $percent
 /// @param {Bool} $set-absolute [true]
 /// @example
-///   @include absolute-cube(54%)
+///   @include microbe-absolute-square(54%)
 ///   // position: absolute;
 ///   // top: 27%;
 ///   // left: 27%;
 ///   // width: 54%;
 ///   // height: 54%;
 /// @example
-///   @include absolute-cube(120%)
+///   @include microbe-absolute-square(120%)
 ///   // position: absolute;
 ///   // top: -10%;
 ///   // left: -10%;
 ///   // width: 120%;
 ///   // height: 120%;
-@mixin _microbe-absolute-cube($percent, $set-absolute: true) {
+@mixin microbe-absolute-square($percent, $set-absolute: true) {
 	@if ($set-absolute) {
 		position: absolute;
 	}

@@ -13,7 +13,7 @@
 			width: auto;
 		}
 
-		@include _microbe-media(900px) {
+		@include microbe-media(900px) {
 			position: relative;
 		}
 	}

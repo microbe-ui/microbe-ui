@@ -1,12 +1,12 @@
 /// Get `unitless` value (trim units)
-/// @group core/functions#strip-units
+/// @group core/functions#microbe-strip-units
 /// @param {Size} $value
 /// @return {Number} trimmed value
 /// @example
-///   strip-units(10px) //  10
-///   strip-units(20rem) // 20
-///   strip-units(5vw) //   5
-@function strip-units($value) {
+///   microbe-strip-units(10px) //  10
+///   microbe-strip-units(20rem) // 20
+///   microbe-strip-units(5vw) //   5
+@function microbe-strip-units($value) {
 	@if type-of($value) == 'number' and not unitless($value) {
 		@return $value / ($value * 0 + 1);
 	} @else {

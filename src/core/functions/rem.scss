@@ -1,21 +1,21 @@
 @import './strip-units';
 
 /// Convert a pixel value to the `rem` value
-/// @group core/functions#rem
+/// @group core/functions#microbe-rem
 /// @param {Number} $value - pixel value, units are optional
 /// @param {Number} $base [16] - base value for calculations
 /// @return {Number}
 /// @example
-///   rem(16) // 1rem
-///   rem(4px) // 0.25rem
-///   rem(20, 20) // 1rem
-///   rem(40, 20px) // 2rem
-@function rem($value, $base: 16) {
+///   microbe-rem(16) // 1rem
+///   microbe-rem(4px) // 0.25rem
+///   microbe-rem(20, 20) // 1rem
+///   microbe-rem(40, 20px) // 2rem
+@function microbe-rem($value, $base: 16) {
 	@if not unitless($value) {
-		$value: strip-units($value);
+		$value: microbe-strip-units($value);
 	}
 	@if not unitless($base) {
-		$base: strip-units($base);
+		$base: microbe-strip-units($base);
 	}
 	@return ($value / $base) * 1rem;
 }

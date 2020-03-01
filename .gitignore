@@ -1,5 +1,5 @@
 /.cache
 /.idea
 /node_modules
-/dist/*.css
+/dist
 /docs

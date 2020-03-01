@@ -1,11 +1,68 @@
-////
-/// @group _settings/
-////
-
-/// @param {Number|Keyword} $breakpoint - {number} | print | landscape | portrait
+/// Generate `@media` queries with content
+/// @group core/mixins#microbe-media
+/// @param {Number | Keyword} $breakpoint - number | print | landscape | portrait
 /// @param {Keyword} $direction [min] - min | max
 /// @param {Keyword} $dimension [width] - width | height | device-width | device-height
-@mixin _microbe-media($breakpoint, $direction: min, $dimension: width) {
+/// @example
+///     .example-block {
+///         font-size: 12px;
+///         @include microbe-media(1024px) {
+///             font-size: 16px;
+///         }
+///         @include microbe-media(1024px, max) {
+///             color: red;
+///         }
+///         @include microbe-media(640px, min, height) {
+///             font-weight: bold;
+///         }
+///         @include microbe-media(landscape) {
+///             background: #eee;
+///         }
+///         @include microbe-media(portrait) {
+///             @include microbe-media(520px, max) {
+///                 background-color: red;
+///             }
+///         }
+///         @include microbe-media(print) {
+///             background: none !important;
+///         }
+///     }
+/// @example css
+///     /* render result */
+///     .example-block {
+///         font-size: 12px;
+///     }
+///     @media only screen and (min-width: 1024px) {
+///         .example-block {
+///             font-size: 16px;
+///         }
+///     }
+///     @media only screen and (max-width: 1023px) {
+///         .example-block {
+///             color: red;
+///         }
+///     }
+///     @media only screen and (min-height: 640px) {
+///         .example-block {
+///             font-weight: bold;
+///         }
+///     }
+///     @media (orientation: landscape) {
+///         .example-block {
+///             background: #eee;
+///         }
+///     }
+///     @media only screen and (orientation: portrait) and (max-width: 519px) {
+///         .example-block {
+///             background-color: red;
+///         }
+///     }
+///     @media print {
+///         .example-block {
+///             background: none !important;
+///         }
+///     }
+@mixin microbe-media($breakpoint, $direction: min, $dimension: width) {
 	$corrector: 0;
 
 	@if $direction == max {

@@ -9,7 +9,8 @@
     "fix": "npm run prettier -- --write && npm run stylelint -- --fix",
     "build": "gulp sass",
     "prettier": "prettier \"src/**/*.scss\" --check",
-    "stylelint": "stylelint \"src/**/*.scss\""
+    "stylelint": "stylelint \"src/**/*.scss\"",
+    "docs": "gulp sass-doc && gulp md-doc"
   },
   "stylelint": {
     "extends": [
@@ -53,6 +54,7 @@
     "node-sass": "^4.13.1",
     "postcss-sort-media-queries": "^1.31.21",
     "prettier": "^1.19.1",
+    "sassdoc": "^2.7.1",
     "sort-css-media-queries": "^1.5.0",
     "stylelint": "^13.2.0",
     "stylelint-config-prettier": "^8.0.1",

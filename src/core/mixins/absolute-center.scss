@@ -1,26 +1,23 @@
-////
-/// @group core
-////
-
+/// @group core/mixins#microbe-absolute-center
 /// @param {Size} $width
 /// @param {Size} $height [$width]
 /// @param {Bool} $set-absolute [true]
 /// @example
-///   @include absolute-cube(3rem)
+///   @include microbe-absolute-cube(3rem)
 ///   // position: absolute;
 ///   // top: 50%;
 ///   // left: 50%;
 ///   // width: 3rem;
 ///   // height: 3rem;
 ///   // margin: -1.5rem 0 0 -1.5rem;
-///   @include absolute-cube(4rem, 60px)
+///   @include microbe-absolute-cube(4rem, 60px)
 ///   // position: absolute;
 ///   // top: 50%;
 ///   // left: 50%;
 ///   // width: 4rem;
 ///   // height: 60px;
 ///   // margin: -30px 0 0 -2rem;
-@mixin _microbe-absolute-center($width, $height: $width, $set-absolute: true) {
+@mixin microbe-absolute-center($width, $height: $width, $set-absolute: true) {
 	@if ($set-absolute) {
 		position: absolute;
 	}
