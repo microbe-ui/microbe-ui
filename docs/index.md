@@ -1,4 +1,6 @@
-# Hello
+![microbe-ui](https://raw.githubusercontent.com/microbe-ui/microbe-ui/master/src/docs/assets/microbe-ui-name-lib.png)
+
+---
 
 ## Table of content
 
@@ -13,9 +15,10 @@
     1. [microbe-flex-cell-width](#microbe-flex-cell-width)
     1. [microbe-media](#microbe-media)
 1. [Variables](#variables)
-    1. [spaces](#spaces)
+    1. [Spaces](#spaces)
+    1. [Module Grid](#module-grid)
 
----****
+---
 
 ## Functions
 
@@ -309,3 +312,10 @@ Generate `@media` queries with content
 | `$microbe-space-xlg` | space size _xlg_ (x-large) | `microbe-rem(32)` | default |
 | `$microbe-space-xxl` | space size _xxl_ (xx-large) | `microbe-rem(48)` | default |
 | `$microbe-space-hg` | space size _hg_ (huge) | `microbe-rem(80)` | default |
+
+### Module Grid
+
+| Name | Description | Value | Scope |
+| --- | --- | --- | --- |
+| `$microbe-module-grid-columns-count` | columns count | `12` | default |
+| `$microbe-module-cell-positions-count` | cell positions count | `12` | default |
