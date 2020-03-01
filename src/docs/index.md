@@ -1,4 +1,4 @@
-![microbe-ui](https://raw.githubusercontent.com/microbe-ui/microbe-ui/master/docs-src/assets/microbe-ui-name-lib.png)
+![microbe-ui](https://raw.githubusercontent.com/microbe-ui/microbe-ui/master/src/docs/assets/microbe-ui-name-lib.png)
 
 ---
 
@@ -15,9 +15,10 @@
     1. [microbe-flex-cell-width](#microbe-flex-cell-width)
     1. [microbe-media](#microbe-media)
 1. [Variables](#variables)
-    1. [spaces](#spaces)
+    1. [Spaces](#spaces)
+    1. [Module Grid](#module-grid)
 
----****
+---
 
 ## Functions
 
@@ -87,3 +88,9 @@
 `insertVariableRow=core/defaults#microbe-space-xlg`
 `insertVariableRow=core/defaults#microbe-space-xxl`
 `insertVariableRow=core/defaults#microbe-space-hg`
+
+### Module Grid
+
+`insertVariablesTable`
+`insertVariableRow=core/defaults#microbe-module-grid-columns-count`
+`insertVariableRow=core/defaults#microbe-module-cell-positions-count`

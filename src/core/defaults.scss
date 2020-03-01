@@ -1,5 +1,9 @@
 @import './functions/rem';
 
+// -----------------------------------------------------------------------------
+// Spaces
+// -----------------------------------------------------------------------------
+
 /// space size _xxs_ (xx-small)
 /// @group core/defaults#microbe-space-xxs
 $microbe-space-xxs: microbe-rem(2) !default;
@@ -35,3 +39,17 @@ $microbe-space-xxl: microbe-rem(48) !default;
 /// space size _hg_ (huge)
 /// @group core/defaults#microbe-space-hg
 $microbe-space-hg: microbe-rem(80) !default;
+
+// -----------------------------------------------------------------------------
+// Module Grid
+// -----------------------------------------------------------------------------
+
+/// columns count
+/// @group core/defaults#microbe-module-grid-columns-count
+/// @type {Number}
+$microbe-module-grid-columns-count: 12 !default;
+
+/// cell positions count
+/// @group core/defaults#microbe-module-cell-positions-count
+/// @type {Number}
+$microbe-module-cell-positions-count: 12 !default;

@@ -1,17 +1,2 @@
 @import 'core';
-.ex {
-	@include microbe-media(1024px) {
-		font-style: italic;
-	}
-
-	@include microbe-media(640px, min, height) {
-		font-style: normal;
-	}
-
-	@include microbe-media(portrait) {
-		@include microbe-media(520px, max) {
-			background-color: red;
-		}
-	}
-}
-// @import 'components/module-grid';
+@import 'components/module-grid';
