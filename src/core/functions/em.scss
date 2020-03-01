@@ -1,0 +1,21 @@
+@import './strip-units';
+
+/// Convert a pixel value to the `em` value
+/// @group core/functions#microbe-em
+/// @param {Number} $value - pixel value, units are optional
+/// @param {Number} $base [16] - base value for calculations
+/// @return {Number}
+/// @example
+///   microbe-em(16) // 1em
+///   microbe-em(24px) // 1.5em
+///   microbe-em(20, 20) // 1em
+///   microbe-em(24, 32) // .75em
+@function microbe-em($value, $base: 16) {
+	@if not unitless($value) {
+		$value: microbe-strip-units($value);
+	}
+	@if not unitless($base) {
+		$base: microbe-strip-units($base);
+	}
+	@return ($value / $base) * 1em;
+}

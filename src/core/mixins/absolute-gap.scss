@@ -1,0 +1,27 @@
+/// @group core/mixins#microbe-absolute-gap
+/// @param {Number} $x - top & bottom
+/// @param {Number} $y - left & right
+/// @param {Bool} $set-absolute [true]
+/// @example
+///   @include microbe-absolute-cube(10px)
+///   // position: absolute;
+///   // top: 10px;
+///   // right: 10px;
+///   // bottom: 10px;
+///   // left: 10px;
+/// @example
+///   @include microbe-absolute-cube(10px, 20px)
+///   // position: absolute;
+///   // top: 10px;
+///   // right: 20px;
+///   // bottom: 10px;
+///   // left: 20px;
+@mixin microbe-absolute-gap($x, $y: $x, $set-absolute: true) {
+	@if ($set-absolute) {
+		position: absolute;
+	}
+	top: $x;
+	right: $y;
+	bottom: $x;
+	left: $y;
+}
