@@ -113,3 +113,4 @@
 `insertVariablesTable`
 `insertVariableRow=core/defaults#microbe-module-grid-columns-count`
 `insertVariableRow=core/defaults#microbe-module-cell-positions-count`
+`insertVariableRow=core/defaults#microbe-module-cell-width-custom-property-name`
