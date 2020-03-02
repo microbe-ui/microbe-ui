@@ -41,7 +41,15 @@ const renderSass = () => {
 
 const renderSassIncremental = () => {
 	const bs = require('browser-sync').create();
-	bs.init({ server: true });
+	bs.init({
+		server: true,
+		files: [
+			{
+				match: ['./index.html', './src/docs/assets/style.css'],
+				fn: () => void bs.reload()
+			}
+		]
+	});
 	return gulp.watch('./src/**', renderSass).on('change', bs.reload);
 };
 
