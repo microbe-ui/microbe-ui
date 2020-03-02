@@ -97,13 +97,19 @@ $microbe-breakpoints-map: _microbe-generate-vars-map(breakpoints);
 // Module Grid
 // -----------------------------------------------------------------------------
 
-/// columns count
+/// Columns count
 /// @group core/defaults#microbe-module-grid-columns-count
 /// @type {Number}
 $microbe-module-grid-columns-count: 12 !default;
 
-/// cell positions count
+/// Cell positions count
 /// @group core/defaults#microbe-module-cell-positions-count
 /// @type {Number}
 $microbe-module-cell-positions-count: 12 !default;
+
+/// CSS Custom property name for cell width value
+/// @group core/defaults#microbe-module-cell-width-custom-property-name
+/// @type {String}
+$microbe-module-cell-width-custom-property-name: --microbe-module-cell-width !default;
+
 

@@ -2,31 +2,31 @@
 
 ._module-grid {
 	$columns: $microbe-module-grid-columns-count;
+	#{$microbe-module-cell-width-custom-property-name}: auto;
 	display: flex;
 	flex-wrap: wrap;
 	list-style: none; // reset ol and ul elements
 	padding: 0;
 	margin: 0;
-	--microbe-cell-width: auto;
 
 	& > * {
-		flex-basis: var(--microbe-cell-width);
-		width: var(--microbe-cell-width);
-		max-width: var(--microbe-cell-width);
+		flex-basis: var(#{$microbe-module-cell-width-custom-property-name});
+		width: var(#{$microbe-module-cell-width-custom-property-name});
+		max-width: var(#{$microbe-module-cell-width-custom-property-name});
 	}
 
 	@for $i from 1 through $columns {
 		$cell-width: percentage($columns / $i / $columns);
 		&--#{$i} {
 			& > * {
-				--microbe-cell-width: #{$cell-width};
+				#{$microbe-module-cell-width-custom-property-name}: #{$cell-width};
 			}
 		}
 	}
 
 	&--auto {
 		& > * {
-			--microbe-cell-width: auto;
+			#{$microbe-module-cell-width-custom-property-name}: auto;
 		}
 	}
 }
@@ -39,12 +39,12 @@
 	@for $i from 1 through $positions {
 		$cell-width: percentage($i / $positions);
 		&--#{$i} {
-			--microbe-cell-width: #{$cell-width};
+			#{$microbe-module-cell-width-custom-property-name}: #{$cell-width};
 		}
 	}
 
 	&--auto {
-		--microbe-cell-width: auto;
+		#{$microbe-module-cell-width-custom-property-name}: auto;
 	}
 }
 
@@ -56,14 +56,14 @@
 				$cell-width: percentage($columns / $i / $columns);
 				&--#{$i} {
 					& > * {
-						--microbe-cell-width: #{$cell-width};
+						#{$microbe-module-cell-width-custom-property-name}: #{$cell-width};
 					}
 				}
 			}
 
 			&--auto {
 				& > * {
-					--microbe-cell-width: auto;
+					#{$microbe-module-cell-width-custom-property-name}: auto;
 				}
 			}
 		}
@@ -73,12 +73,12 @@
 			@for $i from 1 through $positions {
 				$cell-width: percentage($i / $positions);
 				&--#{$i} {
-					--microbe-cell-width: #{$cell-width};
+					#{$microbe-module-cell-width-custom-property-name}: #{$cell-width};
 				}
 			}
 
 			&--auto {
-				--microbe-cell-width: auto;
+				#{$microbe-module-cell-width-custom-property-name}: auto;
 			}
 		}
 	}
