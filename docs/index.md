@@ -16,6 +16,7 @@
     1. [microbe-media](#microbe-media)
 1. [Variables](#variables)
     1. [Spaces](#spaces)
+    1. [Breakpoints](#breakpoints)
     1. [Module Grid](#module-grid)
 
 ---
@@ -312,6 +313,25 @@ Generate `@media` queries with content
 | `$microbe-space-xlg` | space size _xlg_ (x-large) | `microbe-rem(32)` | default |
 | `$microbe-space-xxl` | space size _xxl_ (xx-large) | `microbe-rem(48)` | default |
 | `$microbe-space-hg` | space size _hg_ (huge) | `microbe-rem(80)` | default |
+
+### Breakpoints
+
+| Name | Description | Value | Scope |
+| --- | --- | --- | --- |
+| `$microbe-breakpoint-xxs` | breakpoint screen _xxs_ (xx-small) | `375px` | default |
+| `$microbe-breakpoint-xs` | breakpoint screen _xs_ (x-small) | `480px` | default |
+| `$microbe-breakpoint-sm` | breakpoint screen _sm_ (small) | `568px` | default |
+| `$microbe-breakpoint-md` | breakpoint screen _md_ (medium) | `768px` | default |
+| `$microbe-breakpoint-df` | breakpoint screen _df_ (default) | `1024px` | default |
+| `$microbe-breakpoint-lg` | breakpoint screen _lg_ (large) | `1280px` | default |
+| `$microbe-breakpoint-xl` | breakpoint screen _xl_ (x-large) | `1420px` | default |
+| `$microbe-breakpoint-xxl` | breakpoint screen _xxl_ (xx-large) | `1660px` | default |
+| `$microbe-breakpoint-hd` | breakpoint screen _hd_ (full-hd) | `1960px` | default |
+| `$microbe-breakpoint-2k` | breakpoint screen _2k_ | `null` | default |
+
+---
+
+---
 
 ### Module Grid
 

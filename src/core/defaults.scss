@@ -41,6 +41,50 @@ $microbe-space-xxl: microbe-rem(48) !default;
 $microbe-space-hg: microbe-rem(80) !default;
 
 // -----------------------------------------------------------------------------
+// Breakpoints
+// -----------------------------------------------------------------------------
+
+/// breakpoint screen _xxs_ (xx-small)
+/// @group core/defaults#microbe-breakpoint-xxs
+$microbe-breakpoint-xxs: 375px !default;
+
+/// breakpoint screen _xs_ (x-small)
+/// @group core/defaults#microbe-breakpoint-xs
+$microbe-breakpoint-xs: 480px !default;
+
+/// breakpoint screen _sm_ (small)
+/// @group core/defaults#microbe-breakpoint-sm
+$microbe-breakpoint-sm: 568px !default;
+
+/// breakpoint screen _md_ (medium)
+/// @group core/defaults#microbe-breakpoint-md
+$microbe-breakpoint-md: 768px !default;
+
+/// breakpoint screen _df_ (default)
+/// @group core/defaults#microbe-breakpoint-df
+$microbe-breakpoint-df: 1024px !default;
+
+/// breakpoint screen _lg_ (large)
+/// @group core/defaults#microbe-breakpoint-lg
+$microbe-breakpoint-lg: 1280px !default;
+
+/// breakpoint screen _xl_ (x-large)
+/// @group core/defaults#microbe-breakpoint-xl
+$microbe-breakpoint-xl: 1420px !default;
+
+/// breakpoint screen _xxl_ (xx-large)
+/// @group core/defaults#microbe-breakpoint-xxl
+$microbe-breakpoint-xxl: 1660px !default;
+
+/// breakpoint screen _hd_ (full-hd)
+/// @group core/defaults#microbe-breakpoint-hd
+$microbe-breakpoint-hd: 1960px !default;
+
+/// breakpoint screen _2k_
+/// @group core/defaults#microbe-breakpoint-2k
+$microbe-breakpoint-2k: null !default;
+
+// -----------------------------------------------------------------------------
 // Module Grid
 // -----------------------------------------------------------------------------
 
