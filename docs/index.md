@@ -4,26 +4,31 @@
 
 ## Table of content
 
-1. [Functions](#functions)
-    1. [microbe-strip-units](#microbe-strip-units)
-    1. [microbe-em](#microbe-em)
-    1. [microbe-rem](#microbe-rem)
-1. [Mixins](#mixins)
-    1. [microbe-absolute-center](#microbe-absolute-center)
-    1. [microbe-absolute-gap](#microbe-absolute-gap)
-    1. [microbe-absolute-square](#microbe-absolute-square)
-    1. [microbe-flex-cell-width](#microbe-flex-cell-width)
-    1. [microbe-media](#microbe-media)
-1. [Variables](#variables)
-    1. [Spaces](#spaces)
-    1. [Breakpoints](#breakpoints)
-    1. [Module Grid](#module-grid)
+1. [API](#api)
+    - [Functions](#functions)
+        - [microbe-strip-units](#microbe-strip-units)
+        - [microbe-em](#microbe-em)
+        - [microbe-rem](#microbe-rem)
+    - [Mixins](#mixins)
+        - [microbe-absolute-center](#microbe-absolute-center)
+        - [microbe-absolute-gap](#microbe-absolute-gap)
+        - [microbe-absolute-square](#microbe-absolute-square)
+        - [microbe-flex-cell-width](#microbe-flex-cell-width)
+        - [microbe-media](#microbe-media)
+    - [Variables](#variables)
+        - [Spaces](#spaces)
+        - [Breakpoints](#breakpoints)
+        - [Module Grid](#module-grid)
 
 ---
 
-## Functions
+## API
 
-### `microbe-strip-units()`
+---
+
+### Functions
+
+#### `microbe-strip-units()`
 
 Get `unitless` value (trim units)
 
@@ -48,7 +53,7 @@ microbe-strip-units(5vw) //   5
 
 ---
 
-### `microbe-em()`
+#### `microbe-em()`
 
 ---
 
@@ -75,7 +80,7 @@ microbe-em(20, 20) // 1em
 microbe-em(24, 32) // .75em
 ```
 
-### `microbe-rem()`
+#### `microbe-rem()`
 
 ---
 
@@ -104,9 +109,9 @@ microbe-rem(40, 20px) // 2rem
 
 ---
 
-## Mixins
+### Mixins
 
-### `microbe-absolute-center`
+#### `microbe-absolute-center`
 
 
 
@@ -139,7 +144,7 @@ microbe-rem(40, 20px) // 2rem
 
 ---
 
-### `microbe-absolute-gap`
+#### `microbe-absolute-gap`
 
 
 
@@ -173,7 +178,7 @@ microbe-rem(40, 20px) // 2rem
 
 ---
 
-### `microbe-absolute-square`
+#### `microbe-absolute-square`
 
 
 
@@ -206,7 +211,7 @@ microbe-rem(40, 20px) // 2rem
 
 ---
 
-### `microbe-flex-cell-width`
+#### `microbe-flex-cell-width`
 
 
 
@@ -218,7 +223,7 @@ microbe-rem(40, 20px) // 2rem
 
 ---
 
-### `microbe-media`
+#### `microbe-media`
 
 Generate `@media` queries with content
 
@@ -298,9 +303,11 @@ Generate `@media` queries with content
 
 ---
 
-## Variables
+### Variables
 
-### Spaces
+#### Spaces
+
+Available list of spaces:
 
 | Name | Description | Value | Scope |
 | --- | --- | --- | --- |
@@ -314,7 +321,17 @@ Generate `@media` queries with content
 | `$microbe-space-xxl` | Space size _xxl_ (xx-large) | `microbe-rem(48)` | default |
 | `$microbe-space-hg` | Space size _hg_ (huge) | `microbe-rem(80)` | default |
 
-### Breakpoints
+##### Spaces map
+
+All spaces, that not equal to `false` - are gathered to one map variable `$microbe-spaces-map`. This variable used as iterator on process of generations css code. 
+
+| Name | Description | Value | Scope |
+| --- | --- | --- | --- |
+| `$microbe-spaces-map` | Map with filtered space variables | `_microbe-generate-vars-map(spaces)` | private |
+
+#### Breakpoints
+
+Available list of spaces:
 
 | Name | Description | Value | Scope |
 | --- | --- | --- | --- |
@@ -329,11 +346,17 @@ Generate `@media` queries with content
 | `$microbe-breakpoint-hd` | Breakpoint screen _hd_ (full-hd) | `1960px` | default |
 | `$microbe-breakpoint-2k` | Breakpoint screen _2k_ | `NULL` | default |
 
----
+##### Breakpoints map
+
+All spaces, that not equal to `false` - are gathered to one map variable `$microbe-breakpoints-map`. This variable used as iterator on process of generations css code. 
+
+| Name | Description | Value | Scope |
+| --- | --- | --- | --- |
+| `$microbe-breakpoints-map` | Map with filtered breakpoint variables | `_microbe-generate-vars-map(breakpoints)` | private |
 
 ---
 
-### Module Grid
+#### Module Grid
 
 | Name | Description | Value | Scope |
 | --- | --- | --- | --- |

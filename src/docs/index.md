@@ -4,38 +4,43 @@
 
 ## Table of content
 
-1. [Functions](#functions)
-    1. [microbe-strip-units](#microbe-strip-units)
-    1. [microbe-em](#microbe-em)
-    1. [microbe-rem](#microbe-rem)
-1. [Mixins](#mixins)
-    1. [microbe-absolute-center](#microbe-absolute-center)
-    1. [microbe-absolute-gap](#microbe-absolute-gap)
-    1. [microbe-absolute-square](#microbe-absolute-square)
-    1. [microbe-flex-cell-width](#microbe-flex-cell-width)
-    1. [microbe-media](#microbe-media)
-1. [Variables](#variables)
-    1. [Spaces](#spaces)
-    1. [Breakpoints](#breakpoints)
-    1. [Module Grid](#module-grid)
+1. [API](#api)
+    - [Functions](#functions)
+        - [microbe-strip-units](#microbe-strip-units)
+        - [microbe-em](#microbe-em)
+        - [microbe-rem](#microbe-rem)
+    - [Mixins](#mixins)
+        - [microbe-absolute-center](#microbe-absolute-center)
+        - [microbe-absolute-gap](#microbe-absolute-gap)
+        - [microbe-absolute-square](#microbe-absolute-square)
+        - [microbe-flex-cell-width](#microbe-flex-cell-width)
+        - [microbe-media](#microbe-media)
+    - [Variables](#variables)
+        - [Spaces](#spaces)
+        - [Breakpoints](#breakpoints)
+        - [Module Grid](#module-grid)
 
 ---
 
-## Functions
+## API
 
-### `microbe-strip-units()`
+---
+
+### Functions
+
+#### `microbe-strip-units()`
 
 `insertMixinFn=core/functions#microbe-strip-units`
 
 ---
 
-### `microbe-em()`
+#### `microbe-em()`
 
 ---
 
 `insertMixinFn=core/functions#microbe-em`
 
-### `microbe-rem()`
+#### `microbe-rem()`
 
 ---
 
@@ -43,41 +48,43 @@
 
 ---
 
-## Mixins
+### Mixins
 
-### `microbe-absolute-center`
+#### `microbe-absolute-center`
 
 `insertMixinFn=core/mixins#microbe-absolute-center`
 
 ---
 
-### `microbe-absolute-gap`
+#### `microbe-absolute-gap`
 
 `insertMixinFn=core/mixins#microbe-absolute-gap`
 
 ---
 
-### `microbe-absolute-square`
+#### `microbe-absolute-square`
 
 `insertMixinFn=core/mixins#microbe-absolute-square`
 
 ---
 
-### `microbe-flex-cell-width`
+#### `microbe-flex-cell-width`
 
 `insertMixinFn=core/mixins#microbe-flex-cell-width`
 
 ---
 
-### `microbe-media`
+#### `microbe-media`
 
 `insertMixinFn=core/mixins#microbe-media`
 
 ---
 
-## Variables
+### Variables
 
-### Spaces
+#### Spaces
+
+Available list of spaces:
 
 `insertVariablesTable`
 `insertVariableRow=core/defaults#microbe-space-xxs`
@@ -90,7 +97,16 @@
 `insertVariableRow=core/defaults#microbe-space-xxl`
 `insertVariableRow=core/defaults#microbe-space-hg`
 
-### Breakpoints
+##### Spaces map
+
+All spaces, that not equal to `false` - are gathered to one map variable `$microbe-spaces-map`. This variable used as iterator on process of generations css code. 
+
+`insertVariablesTable`
+`insertVariableRow=core/defaults#microbe-spaces-map`
+
+#### Breakpoints
+
+Available list of spaces:
 
 `insertVariablesTable`
 `insertVariableRow=core/defaults#microbe-breakpoint-xxs`
@@ -104,11 +120,16 @@
 `insertVariableRow=core/defaults#microbe-breakpoint-hd`
 `insertVariableRow=core/defaults#microbe-breakpoint-2k`
 
----
+##### Breakpoints map
+
+All spaces, that not equal to `false` - are gathered to one map variable `$microbe-breakpoints-map`. This variable used as iterator on process of generations css code. 
+
+`insertVariablesTable`
+`insertVariableRow=core/defaults#microbe-breakpoints-map`
 
 ---
 
-### Module Grid
+#### Module Grid
 
 `insertVariablesTable`
 `insertVariableRow=core/defaults#microbe-module-grid-columns-count`
