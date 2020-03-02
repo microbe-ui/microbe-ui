@@ -4,25 +4,31 @@
 
 ## Table of content
 
-1. [Functions](#functions)
-    1. [microbe-strip-units](#microbe-strip-units)
-    1. [microbe-em](#microbe-em)
-    1. [microbe-rem](#microbe-rem)
-1. [Mixins](#mixins)
-    1. [microbe-absolute-center](#microbe-absolute-center)
-    1. [microbe-absolute-gap](#microbe-absolute-gap)
-    1. [microbe-absolute-square](#microbe-absolute-square)
-    1. [microbe-flex-cell-width](#microbe-flex-cell-width)
-    1. [microbe-media](#microbe-media)
-1. [Variables](#variables)
-    1. [Spaces](#spaces)
-    1. [Module Grid](#module-grid)
+1. [API](#api)
+    - [Functions](#functions)
+        - [microbe-strip-units](#microbe-strip-units)
+        - [microbe-em](#microbe-em)
+        - [microbe-rem](#microbe-rem)
+    - [Mixins](#mixins)
+        - [microbe-absolute-center](#microbe-absolute-center)
+        - [microbe-absolute-gap](#microbe-absolute-gap)
+        - [microbe-absolute-square](#microbe-absolute-square)
+        - [microbe-flex-cell-width](#microbe-flex-cell-width)
+        - [microbe-media](#microbe-media)
+    - [Variables](#variables)
+        - [Spaces](#spaces)
+        - [Breakpoints](#breakpoints)
+        - [Module Grid](#module-grid)
 
 ---
 
-## Functions
+## API
 
-### `microbe-strip-units()`
+---
+
+### Functions
+
+#### `microbe-strip-units()`
 
 Get `unitless` value (trim units)
 
@@ -47,7 +53,7 @@ microbe-strip-units(5vw) //   5
 
 ---
 
-### `microbe-em()`
+#### `microbe-em()`
 
 ---
 
@@ -74,7 +80,7 @@ microbe-em(20, 20) // 1em
 microbe-em(24, 32) // .75em
 ```
 
-### `microbe-rem()`
+#### `microbe-rem()`
 
 ---
 
@@ -103,9 +109,9 @@ microbe-rem(40, 20px) // 2rem
 
 ---
 
-## Mixins
+### Mixins
 
-### `microbe-absolute-center`
+#### `microbe-absolute-center`
 
 
 
@@ -138,7 +144,7 @@ microbe-rem(40, 20px) // 2rem
 
 ---
 
-### `microbe-absolute-gap`
+#### `microbe-absolute-gap`
 
 
 
@@ -172,7 +178,7 @@ microbe-rem(40, 20px) // 2rem
 
 ---
 
-### `microbe-absolute-square`
+#### `microbe-absolute-square`
 
 
 
@@ -205,7 +211,7 @@ microbe-rem(40, 20px) // 2rem
 
 ---
 
-### `microbe-flex-cell-width`
+#### `microbe-flex-cell-width`
 
 
 
@@ -217,7 +223,7 @@ microbe-rem(40, 20px) // 2rem
 
 ---
 
-### `microbe-media`
+#### `microbe-media`
 
 Generate `@media` queries with content
 
@@ -297,25 +303,63 @@ Generate `@media` queries with content
 
 ---
 
-## Variables
+### Variables
 
-### Spaces
+#### Spaces
 
-| Name | Description | Value | Scope |
-| --- | --- | --- | --- |
-| `$microbe-space-xxs` | space size _xxs_ (xx-small) | `microbe-rem(2)` | default |
-| `$microbe-space-xs` | space size _xs_ (x-small) | `microbe-rem(4)` | default |
-| `$microbe-space-sm` | space size _sm_ (small) | `microbe-rem(8)` | default |
-| `$microbe-space-md` | space size _md_ (medium) | `microbe-rem(12)` | default |
-| `$microbe-space-df` | space size _df_ (default) | `microbe-rem(16)` | default |
-| `$microbe-space-lg` | space size _lg_ (large) | `microbe-rem(24)` | default |
-| `$microbe-space-xlg` | space size _xlg_ (x-large) | `microbe-rem(32)` | default |
-| `$microbe-space-xxl` | space size _xxl_ (xx-large) | `microbe-rem(48)` | default |
-| `$microbe-space-hg` | space size _hg_ (huge) | `microbe-rem(80)` | default |
-
-### Module Grid
+Available list of spaces:
 
 | Name | Description | Value | Scope |
 | --- | --- | --- | --- |
-| `$microbe-module-grid-columns-count` | columns count | `12` | default |
-| `$microbe-module-cell-positions-count` | cell positions count | `12` | default |
+| `$microbe-space-xxs` | Space size _xxs_ (xx-small) | `microbe-rem(2)` | default |
+| `$microbe-space-xs` | Space size _xs_ (x-small) | `microbe-rem(4)` | default |
+| `$microbe-space-sm` | Space size _sm_ (small) | `microbe-rem(8)` | default |
+| `$microbe-space-md` | Space size _md_ (medium) | `microbe-rem(12)` | default |
+| `$microbe-space-df` | Space size _df_ (default) | `microbe-rem(16)` | default |
+| `$microbe-space-lg` | Space size _lg_ (large) | `microbe-rem(24)` | default |
+| `$microbe-space-xl` | Space size _xl_ (x-large) | `microbe-rem(32)` | default |
+| `$microbe-space-xxl` | Space size _xxl_ (xx-large) | `microbe-rem(48)` | default |
+| `$microbe-space-hg` | Space size _hg_ (huge) | `microbe-rem(80)` | default |
+
+##### Spaces map
+
+All spaces, that not equal to `false` - are gathered to one map variable `$microbe-spaces-map`. This variable used as iterator on process of generations css code. 
+
+| Name | Description | Value | Scope |
+| --- | --- | --- | --- |
+| `$microbe-spaces-map` | Map with filtered space variables | `_microbe-generate-vars-map(spaces)` | private |
+
+#### Breakpoints
+
+Available list of spaces:
+
+| Name | Description | Value | Scope |
+| --- | --- | --- | --- |
+| `$microbe-breakpoint-xxs` | Breakpoint screen _xxs_ (xx-small) | `375px` | default |
+| `$microbe-breakpoint-xs` | Breakpoint screen _xs_ (x-small) | `480px` | default |
+| `$microbe-breakpoint-sm` | Breakpoint screen _sm_ (small) | `568px` | default |
+| `$microbe-breakpoint-md` | Breakpoint screen _md_ (medium) | `768px` | default |
+| `$microbe-breakpoint-df` | Breakpoint screen _df_ (default) | `1024px` | default |
+| `$microbe-breakpoint-lg` | Breakpoint screen _lg_ (large) | `1280px` | default |
+| `$microbe-breakpoint-xl` | Breakpoint screen _xl_ (x-large) | `1420px` | default |
+| `$microbe-breakpoint-xxl` | Breakpoint screen _xxl_ (xx-large) | `1660px` | default |
+| `$microbe-breakpoint-hd` | Breakpoint screen _hd_ (full-hd) | `1960px` | default |
+| `$microbe-breakpoint-2k` | Breakpoint screen _2k_ | `NULL` | default |
+
+##### Breakpoints map
+
+All spaces, that not equal to `false` - are gathered to one map variable `$microbe-breakpoints-map`. This variable used as iterator on process of generations css code. 
+
+| Name | Description | Value | Scope |
+| --- | --- | --- | --- |
+| `$microbe-breakpoints-map` | Map with filtered breakpoint variables | `_microbe-generate-vars-map(breakpoints)` | private |
+
+---
+
+#### Module Grid
+
+| Name | Description | Value | Scope |
+| --- | --- | --- | --- |
+| `$microbe-module-grid-columns-count` | Columns count | `12` | default |
+| `$microbe-module-cell-positions-count` | Cell positions count | `12` | default |
+| `$microbe-module-cell-width-custom-property-name` | CSS Custom property name for cell width value | `--microbe-module-cell-width` | default |
