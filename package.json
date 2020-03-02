@@ -8,8 +8,8 @@
     "test": "npm run prettier && npm run stylelint",
     "fix": "npm run prettier -- --write && npm run stylelint -- --fix",
     "build": "gulp sass",
-    "prettier": "prettier \"src/**/*.scss\" --check",
-    "stylelint": "stylelint \"src/**/*.scss\"",
+    "prettier": "prettier \"src/**/*.{scss,css}\" --check",
+    "stylelint": "stylelint \"src/**/*.{scss,css}\"",
     "docs": "gulp sass-doc && gulp md-doc"
   },
   "stylelint": {
