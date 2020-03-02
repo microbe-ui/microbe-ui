@@ -36,13 +36,11 @@
 
 #### `microbe-em()`
 
----
-
 `insertMixinFn=core/functions#microbe-em`
 
-#### `microbe-rem()`
-
 ---
+
+#### `microbe-rem()`
 
 `insertMixinFn=core/functions#microbe-rem`
 
@@ -103,6 +101,8 @@ All spaces, that not equal to `false` - are gathered to one map variable `$micro
 
 `insertVariablesTable`
 `insertVariableRow=core/defaults#microbe-spaces-map`
+
+---
 
 #### Breakpoints
 

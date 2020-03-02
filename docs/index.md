@@ -55,8 +55,6 @@ microbe-strip-units(5vw) //   5
 
 #### `microbe-em()`
 
----
-
 Convert a pixel value to the `em` value
 
 
@@ -80,9 +78,9 @@ microbe-em(20, 20) // 1em
 microbe-em(24, 32) // .75em
 ```
 
-#### `microbe-rem()`
-
 ---
+
+#### `microbe-rem()`
 
 Convert a pixel value to the `rem` value
 
@@ -328,6 +326,8 @@ All spaces, that not equal to `false` - are gathered to one map variable `$micro
 | Name | Description | Value | Scope |
 | --- | --- | --- | --- |
 | `$microbe-spaces-map` | Map with filtered space variables | `_microbe-generate-vars-map(spaces)` | private |
+
+---
 
 #### Breakpoints
 
