@@ -1,88 +1,97 @@
 @import './functions/rem';
+@import './functions/generate-vars-map';
 
 // -----------------------------------------------------------------------------
 // Spaces
 // -----------------------------------------------------------------------------
 
-/// space size _xxs_ (xx-small)
+/// Space size _xxs_ (xx-small)
 /// @group core/defaults#microbe-space-xxs
 $microbe-space-xxs: microbe-rem(2) !default;
 
-/// space size _xs_ (x-small)
+/// Space size _xs_ (x-small)
 /// @group core/defaults#microbe-space-xs
 $microbe-space-xs: microbe-rem(4) !default;
 
-/// space size _sm_ (small)
+/// Space size _sm_ (small)
 /// @group core/defaults#microbe-space-sm
 $microbe-space-sm: microbe-rem(8) !default;
 
-/// space size _md_ (medium)
+/// Space size _md_ (medium)
 /// @group core/defaults#microbe-space-md
 $microbe-space-md: microbe-rem(12) !default;
 
-/// space size _df_ (default)
+/// Space size _df_ (default)
 /// @group core/defaults#microbe-space-df
 $microbe-space-df: microbe-rem(16) !default;
 
-/// space size _lg_ (large)
+/// Space size _lg_ (large)
 /// @group core/defaults#microbe-space-lg
 $microbe-space-lg: microbe-rem(24) !default;
 
-/// space size _xlg_ (x-large)
-/// @group core/defaults#microbe-space-xlg
-$microbe-space-xlg: microbe-rem(32) !default;
+/// Space size _xl_ (x-large)
+/// @group core/defaults#microbe-space-xl
+$microbe-space-xl: microbe-rem(32) !default;
 
-/// space size _xxl_ (xx-large)
+/// Space size _xxl_ (xx-large)
 /// @group core/defaults#microbe-space-xxl
 $microbe-space-xxl: microbe-rem(48) !default;
 
-/// space size _hg_ (huge)
+/// Space size _hg_ (huge)
 /// @group core/defaults#microbe-space-hg
 $microbe-space-hg: microbe-rem(80) !default;
+
+/// Map with filtered space variables
+/// @group core/defaults#microbe-spaces-map
+$microbe-spaces-map: _microbe-generate-vars-map(spaces);
 
 // -----------------------------------------------------------------------------
 // Breakpoints
 // -----------------------------------------------------------------------------
 
-/// breakpoint screen _xxs_ (xx-small)
+/// Breakpoint screen _xxs_ (xx-small)
 /// @group core/defaults#microbe-breakpoint-xxs
 $microbe-breakpoint-xxs: 375px !default;
 
-/// breakpoint screen _xs_ (x-small)
+/// Breakpoint screen _xs_ (x-small)
 /// @group core/defaults#microbe-breakpoint-xs
 $microbe-breakpoint-xs: 480px !default;
 
-/// breakpoint screen _sm_ (small)
+/// Breakpoint screen _sm_ (small)
 /// @group core/defaults#microbe-breakpoint-sm
 $microbe-breakpoint-sm: 568px !default;
 
-/// breakpoint screen _md_ (medium)
+/// Breakpoint screen _md_ (medium)
 /// @group core/defaults#microbe-breakpoint-md
 $microbe-breakpoint-md: 768px !default;
 
-/// breakpoint screen _df_ (default)
+/// Breakpoint screen _df_ (default)
 /// @group core/defaults#microbe-breakpoint-df
 $microbe-breakpoint-df: 1024px !default;
 
-/// breakpoint screen _lg_ (large)
+/// Breakpoint screen _lg_ (large)
 /// @group core/defaults#microbe-breakpoint-lg
 $microbe-breakpoint-lg: 1280px !default;
 
-/// breakpoint screen _xl_ (x-large)
+/// Breakpoint screen _xl_ (x-large)
 /// @group core/defaults#microbe-breakpoint-xl
 $microbe-breakpoint-xl: 1420px !default;
 
-/// breakpoint screen _xxl_ (xx-large)
+/// Breakpoint screen _xxl_ (xx-large)
 /// @group core/defaults#microbe-breakpoint-xxl
 $microbe-breakpoint-xxl: 1660px !default;
 
-/// breakpoint screen _hd_ (full-hd)
+/// Breakpoint screen _hd_ (full-hd)
 /// @group core/defaults#microbe-breakpoint-hd
 $microbe-breakpoint-hd: 1960px !default;
 
-/// breakpoint screen _2k_
+/// Breakpoint screen _2k_
 /// @group core/defaults#microbe-breakpoint-2k
-$microbe-breakpoint-2k: null !default;
+$microbe-breakpoint-2k: NULL !default;
+
+/// Map with filtered breakpoint variables
+/// @group core/defaults#microbe-breakpoints-map
+$microbe-breakpoints-map: _microbe-generate-vars-map(breakpoints);
 
 // -----------------------------------------------------------------------------
 // Module Grid
@@ -97,3 +106,4 @@ $microbe-module-grid-columns-count: 12 !default;
 /// @group core/defaults#microbe-module-cell-positions-count
 /// @type {Number}
 $microbe-module-cell-positions-count: 12 !default;
+

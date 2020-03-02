@@ -86,7 +86,7 @@
 `insertVariableRow=core/defaults#microbe-space-md`
 `insertVariableRow=core/defaults#microbe-space-df`
 `insertVariableRow=core/defaults#microbe-space-lg`
-`insertVariableRow=core/defaults#microbe-space-xlg`
+`insertVariableRow=core/defaults#microbe-space-xl`
 `insertVariableRow=core/defaults#microbe-space-xxl`
 `insertVariableRow=core/defaults#microbe-space-hg`
 

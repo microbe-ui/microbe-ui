@@ -1,0 +1,38 @@
+@function _microbe-generate-vars-map($type) {
+	$temp: ();
+	@if ($type == spaces) {
+		$temp: (
+			'xxs': $microbe-space-xxs,
+			'xs': $microbe-space-xs,
+			'sm': $microbe-space-sm,
+			'md': $microbe-space-md,
+			'df': $microbe-space-df,
+			'lg': $microbe-space-lg,
+			'xl': $microbe-space-xl,
+			'xxl': $microbe-space-xxl,
+			'hg': $microbe-space-hg
+		);
+	} @else if ($type == breakpoints) {
+		$temp: (
+			'xxs': $microbe-breakpoint-xxs,
+			'xs': $microbe-breakpoint-xs,
+			'sm': $microbe-breakpoint-sm,
+			'md': $microbe-breakpoint-md,
+			'df': $microbe-breakpoint-df,
+			'lg': $microbe-breakpoint-lg,
+			'xl': $microbe-breakpoint-xl,
+			'xxl': $microbe-breakpoint-xxl,
+			'hd': $microbe-breakpoint-hd,
+			'2k': $microbe-breakpoint-2k
+		);
+	}
+
+	$map: $temp;
+	@each $key, $value in $temp {
+		@if ($value == NULL) {
+			$map: map-remove($map, $key);
+		}
+	}
+
+	@return $map;
+}
