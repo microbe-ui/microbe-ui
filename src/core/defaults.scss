@@ -132,3 +132,12 @@ $microbe-module-cell-width-custom-property-name: --microbe-module-cell-width !de
 /// @group core/defaults#microbe-spacer-size-custom-property-name
 /// @type {String}
 $microbe-spacer-size-custom-property-name: --microbe-spacer-size !default;
+
+// -----------------------------------------------------------------------------
+// Owl
+// -----------------------------------------------------------------------------
+
+/// CSS Custom property name for "owl" module size
+/// @group core/defaults#microbe-owl-size-custom-property-name
+/// @type {String}
+$microbe-owl-size-custom-property-name: --microbe-owl-size !default;

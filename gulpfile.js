@@ -20,7 +20,7 @@ const renderSass = () => {
 		.src('./src/bundle.scss')
 		.pipe(
 			sass({
-				outputStyle: 'compressed',
+				outputStyle: 'expanded',
 				indentType: 'tab',
 				indentWidth: 1
 			}).on('error', notify.onError('Error: <%= error.message %>'))

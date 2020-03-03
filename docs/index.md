@@ -21,6 +21,7 @@
         - [IE Fallback](#ie-fallback)
     - [Components](#variables)
         - [Module Grid](#module-grid)
+        - [Owl](#owl)
         - [Spacer](#module-grid)
 
 ---
@@ -380,6 +381,18 @@ Use degradation for IE support
 | `$microbe-module-grid-columns-count` | Columns count | `12` | default |
 | `$microbe-module-cell-positions-count` | Cell positions count | `12` | default |
 | `$microbe-module-cell-width-custom-property-name` | CSS Custom property name for cell width value | `--microbe-module-cell-width` | default |
+
+---
+
+#### Owl
+
+
+| Name | Description | Value | Scope |
+| --- | --- | --- | --- |
+| `$microbe-owl-size-custom-property-name` | CSS Custom property name for "owl" module size | `--microbe-owl-size` | default |
+
+Read more about "Lobotomized Owls":  
+https://alistapart.com/article/axiomatic-css-and-lobotomized-owls/
 
 ---
 
