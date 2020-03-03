@@ -2,7 +2,9 @@
 
 // $microbe-ie-fallback: true;
 // $microbe-module-cell-width-custom-property-name: --m-mcw;
+// $microbe-owl-size-custom-property-name: --m-os;
 // $microbe-spacer-size-custom-property-name: --m-ss;
 
 @import 'components/module-grid';
+@import 'components/owl';
 @import 'components/spacer';

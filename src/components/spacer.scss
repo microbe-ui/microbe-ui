@@ -12,10 +12,9 @@
 			padding-bottom: var(#{$name}) !important;
 		}
 	}
+
 	@each $space, $value in $microbe-spaces-map {
 		&--#{$space} {
-			$m: #{$value * -1} !important;
-			$p: $value !important;
 			@if ($microbe-ie-fallback == false) {
 				#{$name}: #{$value};
 			} @else {
@@ -37,8 +36,6 @@
 			$name: $microbe-spacer-size-custom-property-name;
 			@each $space, $value in $microbe-spaces-map {
 				&--#{$space} {
-					$m: #{$value * -1} !important;
-					$p: $value !important;
 					@if ($microbe-ie-fallback == false) {
 						#{$name}: #{$value};
 					} @else {

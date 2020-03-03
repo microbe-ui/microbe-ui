@@ -21,6 +21,7 @@
         - [IE Fallback](#ie-fallback)
     - [Components](#variables)
         - [Module Grid](#module-grid)
+        - [Owl](#owl)
         - [Spacer](#module-grid)
 
 ---
@@ -150,6 +151,17 @@ __`$microbe-ie-fallback`__ | default value: `insertVariableValue=core/defaults#m
 `insertVariableRow=core/defaults#microbe-module-grid-columns-count`
 `insertVariableRow=core/defaults#microbe-module-cell-positions-count`
 `insertVariableRow=core/defaults#microbe-module-cell-width-custom-property-name`
+
+---
+
+#### Owl
+
+
+`insertVariablesTable`
+`insertVariableRow=core/defaults#microbe-owl-size-custom-property-name`
+
+Read more about "Lobotomized Owls":  
+https://alistapart.com/article/axiomatic-css-and-lobotomized-owls/
 
 ---
 
