@@ -19,6 +19,7 @@
         - [Spaces](#spaces)
         - [Breakpoints](#breakpoints)
         - [Module Grid](#module-grid)
+        - [IE Fallback](#ie-fallback)
 
 ---
 
@@ -135,3 +136,11 @@ All spaces, that not equal to `false` - are gathered to one map variable `$micro
 `insertVariableRow=core/defaults#microbe-module-grid-columns-count`
 `insertVariableRow=core/defaults#microbe-module-cell-positions-count`
 `insertVariableRow=core/defaults#microbe-module-cell-width-custom-property-name`
+
+---
+
+#### IE Fallback
+
+__`$microbe-ie-fallback`__ | default value: `insertVariableValue=core/defaults#microbe-ie-fallback`
+
+`insertVariableDescription=core/defaults#microbe-ie-fallback`

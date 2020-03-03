@@ -19,6 +19,7 @@
         - [Spaces](#spaces)
         - [Breakpoints](#breakpoints)
         - [Module Grid](#module-grid)
+        - [IE Fallback](#ie-fallback)
 
 ---
 
@@ -342,9 +343,9 @@ Available list of spaces:
 | `$microbe-breakpoint-df` | Breakpoint screen _df_ (default) | `1024px` | default |
 | `$microbe-breakpoint-lg` | Breakpoint screen _lg_ (large) | `1280px` | default |
 | `$microbe-breakpoint-xl` | Breakpoint screen _xl_ (x-large) | `1420px` | default |
-| `$microbe-breakpoint-xxl` | Breakpoint screen _xxl_ (xx-large) | `1660px` | default |
-| `$microbe-breakpoint-hd` | Breakpoint screen _hd_ (full-hd) | `1960px` | default |
-| `$microbe-breakpoint-2k` | Breakpoint screen _2k_ | `NULL` | default |
+| `$microbe-breakpoint-xxl` | Breakpoint screen _xxl_ (xx-large). Expected value: `1660px` | `NULL` | default |
+| `$microbe-breakpoint-hd` | Breakpoint screen _hd_ (full-hd). Expected value: `1980px` | `NULL` | default |
+| `$microbe-breakpoint-2k` | Breakpoint screen _2k_. Expected value: `2048px` | `NULL` | default |
 
 ##### Breakpoints map
 
@@ -363,3 +364,13 @@ All spaces, that not equal to `false` - are gathered to one map variable `$micro
 | `$microbe-module-grid-columns-count` | Columns count | `12` | default |
 | `$microbe-module-cell-positions-count` | Cell positions count | `12` | default |
 | `$microbe-module-cell-width-custom-property-name` | CSS Custom property name for cell width value | `--microbe-module-cell-width` | default |
+
+---
+
+#### IE Fallback
+
+__`$microbe-ie-fallback`__ | default value: `false`
+
+Use degradation for IE support
+- CSS Custom properties will be transformed to CSS values
+

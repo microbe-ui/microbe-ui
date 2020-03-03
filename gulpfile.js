@@ -151,9 +151,21 @@ const generateMarkdownDocs = () => {
 		if (doc === undefined) {
 			return '';
 		}
-		const description = doc.description.replace(/\r?\n$/, '');
+		const description = doc.description
+			.replace(/\r?\n/g, ' ')
+			.replace(/^\s+|\s+$/g, '');
 		const { name, value, scope } = doc.context;
 		return mdTD([mdCode('$' + name), description, mdCode(value), scope]);
+	};
+
+	const insertVariableDescription = /`insertVariableDescription=(.+)`/g;
+	const replacerVariableDescription = (sample, group) => {
+		return sassDocData[group] ? sassDocData[group].description : '';
+	};
+
+	const insertVariableValue = /`insertVariableValue=(.+)`/g;
+	const replacerVariableValue = (sample, group) => {
+		return sassDocData[group] ? mdCode(sassDocData[group].context.value) : '---';
 	};
 
 	return gulp
@@ -164,6 +176,8 @@ const generateMarkdownDocs = () => {
 				content
 					.replace(insertVariablesTable, replacerVariablesTable)
 					.replace(insertVariableRow, replacerVariableRow)
+					.replace(insertVariableDescription, replacerVariableDescription)
+					.replace(insertVariableValue, replacerVariableValue)
 					.replace(insertMixinFn, replacerMixinFn)
 			);
 		})
