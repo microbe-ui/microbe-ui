@@ -168,12 +168,34 @@ const generateMarkdownDocs = () => {
 		return sassDocData[group] ? mdCode(sassDocData[group].context.value) : '---';
 	};
 
+	const insertNavHome = /`insertNavHome`/g;
+	const replacerNavHome = () => {
+		return [
+			'\n',
+			'[🔙 _Home_](./index.md)\n',
+			''
+		].join('\n');
+	};
+
+	const insertNavDivider = /`insertNavDivider`/g;
+	const replacerNavDivider = () => {
+		return [
+			'',
+			'---\n',
+			'[🔙 _Home_](./index.md) | [🔝 _Table of content_](#table-of-content)\n',
+			'---',
+			''
+		].join('\n');
+	};
+
 	return gulp
 		.src('./src/docs/**/*.md')
 		.on('data', (file) => {
 			const content = file._contents.toString();
 			file._contents = Buffer.from(
 				content
+					.replace(insertNavHome, replacerNavHome)
+					.replace(insertNavDivider, replacerNavDivider)
 					.replace(insertVariablesTable, replacerVariablesTable)
 					.replace(insertVariableRow, replacerVariableRow)
 					.replace(insertVariableDescription, replacerVariableDescription)
