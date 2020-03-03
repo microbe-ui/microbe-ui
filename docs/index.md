@@ -18,8 +18,10 @@
     - [Variables](#variables)
         - [Spaces](#spaces)
         - [Breakpoints](#breakpoints)
-        - [Module Grid](#module-grid)
         - [IE Fallback](#ie-fallback)
+    - [Components](#variables)
+        - [Module Grid](#module-grid)
+        - [Spacer](#module-grid)
 
 ---
 
@@ -357,6 +359,20 @@ All spaces, that not equal to `false` - are gathered to one map variable `$micro
 
 ---
 
+#### IE Fallback
+
+__`$microbe-ie-fallback`__ | default value: `false`
+
+Use degradation for IE support
+- CSS Custom properties will be transformed to CSS values
+
+
+---
+
+### Components
+
+---
+
 #### Module Grid
 
 | Name | Description | Value | Scope |
@@ -367,10 +383,8 @@ All spaces, that not equal to `false` - are gathered to one map variable `$micro
 
 ---
 
-#### IE Fallback
+#### Spacer
 
-__`$microbe-ie-fallback`__ | default value: `false`
-
-Use degradation for IE support
-- CSS Custom properties will be transformed to CSS values
-
+| Name | Description | Value | Scope |
+| --- | --- | --- | --- |
+| `$microbe-spacer-size-custom-property-name` | CSS Custom property name for spacer size | `--microbe-spacer-size` | default |
