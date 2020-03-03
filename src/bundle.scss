@@ -1,2 +1,8 @@
 @import 'core';
+
+// $microbe-ie-fallback: true;
+// $microbe-module-cell-width-custom-property-name: --m-mcw;
+// $microbe-spacer-size-custom-property-name: --m-ss;
+
 @import 'components/module-grid';
+@import 'components/spacer';

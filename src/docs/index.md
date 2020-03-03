@@ -18,8 +18,10 @@
     - [Variables](#variables)
         - [Spaces](#spaces)
         - [Breakpoints](#breakpoints)
-        - [Module Grid](#module-grid)
         - [IE Fallback](#ie-fallback)
+    - [Components](#variables)
+        - [Module Grid](#module-grid)
+        - [Spacer](#module-grid)
 
 ---
 
@@ -130,6 +132,18 @@ All spaces, that not equal to `false` - are gathered to one map variable `$micro
 
 ---
 
+#### IE Fallback
+
+__`$microbe-ie-fallback`__ | default value: `insertVariableValue=core/defaults#microbe-ie-fallback`
+
+`insertVariableDescription=core/defaults#microbe-ie-fallback`
+
+---
+
+### Components
+
+---
+
 #### Module Grid
 
 `insertVariablesTable`
@@ -139,8 +153,7 @@ All spaces, that not equal to `false` - are gathered to one map variable `$micro
 
 ---
 
-#### IE Fallback
+#### Spacer
 
-__`$microbe-ie-fallback`__ | default value: `insertVariableValue=core/defaults#microbe-ie-fallback`
-
-`insertVariableDescription=core/defaults#microbe-ie-fallback`
+`insertVariablesTable`
+`insertVariableRow=core/defaults#microbe-spacer-size-custom-property-name`
