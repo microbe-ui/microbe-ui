@@ -1,8 +1,10 @@
 /.cache
 /.idea
+/.github
 /node_modules
 /dist
 /gulpfile.js
 /index.html
 /docs
-/src/docs-src
+/src/bundle.scss
+/src/docs

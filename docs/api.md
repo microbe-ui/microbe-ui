@@ -56,7 +56,7 @@ microbe-strip-units(5vw) //   5
 
 ---
 
-[🔙 _Home_](./index.md) | [🔝 _Table of content_](#table-of-content)
+[🔙 _Home_](./index.md) | [🔝 _Table of content_](#api)
 
 ---
 
@@ -88,7 +88,7 @@ microbe-em(24, 32) // .75em
 
 ---
 
-[🔙 _Home_](./index.md) | [🔝 _Table of content_](#table-of-content)
+[🔙 _Home_](./index.md) | [🔝 _Table of content_](#api)
 
 ---
 
@@ -120,7 +120,7 @@ microbe-rem(40, 20px) // 2rem
 
 ---
 
-[🔙 _Home_](./index.md) | [🔝 _Table of content_](#table-of-content)
+[🔙 _Home_](./index.md) | [🔝 _Table of content_](#api)
 
 ---
 
@@ -160,7 +160,7 @@ microbe-rem(40, 20px) // 2rem
 
 ---
 
-[🔙 _Home_](./index.md) | [🔝 _Table of content_](#table-of-content)
+[🔙 _Home_](./index.md) | [🔝 _Table of content_](#api)
 
 ---
 
@@ -199,7 +199,7 @@ microbe-rem(40, 20px) // 2rem
 
 ---
 
-[🔙 _Home_](./index.md) | [🔝 _Table of content_](#table-of-content)
+[🔙 _Home_](./index.md) | [🔝 _Table of content_](#api)
 
 ---
 
@@ -237,7 +237,7 @@ microbe-rem(40, 20px) // 2rem
 
 ---
 
-[🔙 _Home_](./index.md) | [🔝 _Table of content_](#table-of-content)
+[🔙 _Home_](./index.md) | [🔝 _Table of content_](#api)
 
 ---
 
@@ -254,7 +254,7 @@ microbe-rem(40, 20px) // 2rem
 
 ---
 
-[🔙 _Home_](./index.md) | [🔝 _Table of content_](#table-of-content)
+[🔙 _Home_](./index.md) | [🔝 _Table of content_](#api)
 
 ---
 
@@ -339,7 +339,7 @@ Generate `@media` queries with content
 
 ---
 
-[🔙 _Home_](./index.md) | [🔝 _Table of content_](#table-of-content)
+[🔙 _Home_](./index.md) | [🔝 _Table of content_](#api)
 
 ---
 
@@ -373,7 +373,7 @@ All spaces, that not equal to `false` - are gathered to one map variable `$micro
 
 ---
 
-[🔙 _Home_](./index.md) | [🔝 _Table of content_](#table-of-content)
+[🔙 _Home_](./index.md) | [🔝 _Table of content_](#api)
 
 ---
 
@@ -406,7 +406,7 @@ All spaces, that not equal to `false` - are gathered to one map variable `$micro
 
 ---
 
-[🔙 _Home_](./index.md) | [🔝 _Table of content_](#table-of-content)
+[🔙 _Home_](./index.md) | [🔝 _Table of content_](#api)
 
 ---
 
@@ -422,7 +422,7 @@ Use degradation for IE support
 
 ---
 
-[🔙 _Home_](./index.md) | [🔝 _Table of content_](#table-of-content)
+[🔙 _Home_](./index.md) | [🔝 _Table of content_](#api)
 
 ---
 
@@ -430,6 +430,11 @@ Use degradation for IE support
 ## Components
 
 ### Module Grid
+
+```scss
+// import component directly
+@import "~microbe-ui/components/module-grid";
+```
 
 | Name | Description | Value | Scope |
 | --- | --- | --- | --- |
@@ -440,13 +445,17 @@ Use degradation for IE support
 
 ---
 
-[🔙 _Home_](./index.md) | [🔝 _Table of content_](#table-of-content)
+[🔙 _Home_](./index.md) | [🔝 _Table of content_](#api)
 
 ---
 
 
 ### Owl
 
+```scss
+// import component directly
+@import "~microbe-ui/components/owl";
+```
 
 | Name | Description | Value | Scope |
 | --- | --- | --- | --- |
@@ -458,12 +467,17 @@ https://alistapart.com/article/axiomatic-css-and-lobotomized-owls/
 
 ---
 
-[🔙 _Home_](./index.md) | [🔝 _Table of content_](#table-of-content)
+[🔙 _Home_](./index.md) | [🔝 _Table of content_](#api)
 
 ---
 
 
 ### Spacer
+
+```scss
+// import component directly
+@import "~microbe-ui/components/spacer";
+```
 
 | Name | Description | Value | Scope |
 | --- | --- | --- | --- |
@@ -472,7 +486,7 @@ https://alistapart.com/article/axiomatic-css-and-lobotomized-owls/
 
 ---
 
-[🔙 _Home_](./index.md) | [🔝 _Table of content_](#table-of-content)
+[🔙 _Home_](./index.md) | [🔝 _Table of content_](#api)
 
 ---
 

@@ -30,44 +30,44 @@
 ### `microbe-strip-units()`
 
 `insertMixinFn=core/functions#microbe-strip-units`
-`insertNavDivider`
+`insertNavDivider=api`
 
 ### `microbe-em()`
 
 `insertMixinFn=core/functions#microbe-em`
-`insertNavDivider`
+`insertNavDivider=api`
 
 ### `microbe-rem()`
 
 `insertMixinFn=core/functions#microbe-rem`
-`insertNavDivider`
+`insertNavDivider=api`
 
 ## Mixins
 
 ### `microbe-absolute-center`
 
 `insertMixinFn=core/mixins#microbe-absolute-center`
-`insertNavDivider`
+`insertNavDivider=api`
 
 ### `microbe-absolute-gap`
 
 `insertMixinFn=core/mixins#microbe-absolute-gap`
-`insertNavDivider`
+`insertNavDivider=api`
 
 ### `microbe-absolute-square`
 
 `insertMixinFn=core/mixins#microbe-absolute-square`
-`insertNavDivider`
+`insertNavDivider=api`
 
 ### `microbe-flex-cell-width`
 
 `insertMixinFn=core/mixins#microbe-flex-cell-width`
-`insertNavDivider`
+`insertNavDivider=api`
 
 ### `microbe-media`
 
 `insertMixinFn=core/mixins#microbe-media`
-`insertNavDivider`
+`insertNavDivider=api`
 
 ## Variables
 
@@ -93,7 +93,7 @@ All spaces, that not equal to `false` - are gathered to one map variable `$micro
 `insertVariablesTable`
 `insertVariableRow=core/defaults#microbe-spaces-map`
 
-`insertNavDivider`
+`insertNavDivider=api`
 
 ### Breakpoints
 
@@ -118,7 +118,7 @@ All spaces, that not equal to `false` - are gathered to one map variable `$micro
 `insertVariablesTable`
 `insertVariableRow=core/defaults#microbe-breakpoints-map`
 
-`insertNavDivider`
+`insertNavDivider=api`
 
 ### IE Fallback
 
@@ -126,21 +126,30 @@ __`$microbe-ie-fallback`__ | default value: `insertVariableValue=core/defaults#m
 
 `insertVariableDescription=core/defaults#microbe-ie-fallback`
 
-`insertNavDivider`
+`insertNavDivider=api`
 
 ## Components
 
 ### Module Grid
+
+```scss
+// import component directly
+@import "~microbe-ui/components/module-grid";
+```
 
 `insertVariablesTable`
 `insertVariableRow=core/defaults#microbe-module-grid-columns-count`
 `insertVariableRow=core/defaults#microbe-module-cell-positions-count`
 `insertVariableRow=core/defaults#microbe-module-cell-width-custom-property-name`
 
-`insertNavDivider`
+`insertNavDivider=api`
 
 ### Owl
 
+```scss
+// import component directly
+@import "~microbe-ui/components/owl";
+```
 
 `insertVariablesTable`
 `insertVariableRow=core/defaults#microbe-owl-size-custom-property-name`
@@ -148,11 +157,16 @@ __`$microbe-ie-fallback`__ | default value: `insertVariableValue=core/defaults#m
 Read more about "Lobotomized Owls":  
 https://alistapart.com/article/axiomatic-css-and-lobotomized-owls/
 
-`insertNavDivider`
+`insertNavDivider=api`
 
 ### Spacer
+
+```scss
+// import component directly
+@import "~microbe-ui/components/spacer";
+```
 
 `insertVariablesTable`
 `insertVariableRow=core/defaults#microbe-spacer-size-custom-property-name`
 
-`insertNavDivider`
+`insertNavDivider=api`

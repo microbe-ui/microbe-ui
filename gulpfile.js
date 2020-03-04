@@ -177,12 +177,12 @@ const generateMarkdownDocs = () => {
 		].join('\n');
 	};
 
-	const insertNavDivider = /`insertNavDivider`/g;
-	const replacerNavDivider = () => {
+	const insertNavDivider = /`insertNavDivider=(.+)`/g;
+	const replacerNavDivider = (sample, group) => {
 		return [
 			'',
 			'---\n',
-			'[🔙 _Home_](./index.md) | [🔝 _Table of content_](#table-of-content)\n',
+			`[🔙 _Home_](./index.md) | [🔝 _Table of content_](#${group})\n`,
 			'---',
 			''
 		].join('\n');
