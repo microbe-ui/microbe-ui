@@ -431,6 +431,11 @@ Use degradation for IE support
 
 ### Module Grid
 
+```scss
+// import component directly
+@import "~microbe-ui/components/module-grid";
+```
+
 | Name | Description | Value | Scope |
 | --- | --- | --- | --- |
 | `$microbe-module-grid-columns-count` | Columns count | `12` | default |
@@ -447,6 +452,10 @@ Use degradation for IE support
 
 ### Owl
 
+```scss
+// import component directly
+@import "~microbe-ui/components/owl";
+```
 
 | Name | Description | Value | Scope |
 | --- | --- | --- | --- |
@@ -464,6 +473,11 @@ https://alistapart.com/article/axiomatic-css-and-lobotomized-owls/
 
 
 ### Spacer
+
+```scss
+// import component directly
+@import "~microbe-ui/components/spacer";
+```
 
 | Name | Description | Value | Scope |
 | --- | --- | --- | --- |

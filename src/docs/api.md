@@ -132,6 +132,11 @@ __`$microbe-ie-fallback`__ | default value: `insertVariableValue=core/defaults#m
 
 ### Module Grid
 
+```scss
+// import component directly
+@import "~microbe-ui/components/module-grid";
+```
+
 `insertVariablesTable`
 `insertVariableRow=core/defaults#microbe-module-grid-columns-count`
 `insertVariableRow=core/defaults#microbe-module-cell-positions-count`
@@ -141,6 +146,10 @@ __`$microbe-ie-fallback`__ | default value: `insertVariableValue=core/defaults#m
 
 ### Owl
 
+```scss
+// import component directly
+@import "~microbe-ui/components/owl";
+```
 
 `insertVariablesTable`
 `insertVariableRow=core/defaults#microbe-owl-size-custom-property-name`
@@ -151,6 +160,11 @@ https://alistapart.com/article/axiomatic-css-and-lobotomized-owls/
 `insertNavDivider=api`
 
 ### Spacer
+
+```scss
+// import component directly
+@import "~microbe-ui/components/spacer";
+```
 
 `insertVariablesTable`
 `insertVariableRow=core/defaults#microbe-spacer-size-custom-property-name`
