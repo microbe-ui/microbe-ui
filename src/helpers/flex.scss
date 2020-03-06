@@ -1,0 +1,115 @@
+@import '../core';
+
+._ {
+	@mixin generate () {
+		&flex {
+			display: flex !important;
+		}
+
+		&items-start {
+			align-items: flex-start !important;
+		}
+
+		&items-end {
+			align-items: flex-end !important;
+		}
+
+		&items-center {
+			align-items: center !important;
+		}
+
+		&items-stretch {
+			align-items: stretch !important;
+		}
+
+		&items-baseline {
+			align-items: stretch !important;
+		}
+
+		&justify-start {
+			justify-content: flex-start !important;
+		}
+
+		&justify-end {
+			justify-content: flex-end !important;
+		}
+
+		&justify-center {
+			justify-content: center !important;
+		}
+
+		&justify-between {
+			justify-content: space-between !important;
+		}
+
+		&justify-around {
+			justify-content: space-around !important;
+		}
+
+		&self-start {
+			align-self: flex-start !important;
+		}
+
+		&self-end {
+			align-self: flex-end !important;
+		}
+
+		&self-center {
+			align-self: center !important;
+		}
+
+		&self-stretch {
+			align-self: stretch !important;
+		}
+
+		&flex-wrap {
+			flex-wrap: wrap !important;
+		}
+
+		&flex-nowrap {
+			flex-wrap: nowrap !important;
+		}
+
+		&flex-column {
+			flex-direction: column !important;
+		}
+
+		&flex-column-reverse {
+			flex-direction: column-reverse !important;
+		}
+
+		&flex-row {
+			flex-direction: row !important;
+		}
+
+		&flex-row-reverse {
+			flex-direction: row-reverse !important;
+		}
+
+		&flex-grow {
+			flex-grow: 1 !important;
+		}
+
+		&flex-nogrow {
+			flex-grow: 0 !important;
+		}
+
+		&flex-shrink {
+			flex-shrink: 1 !important;
+		}
+
+		&flex-noshrink {
+			flex-shrink: 0 !important;
+		}
+	}
+
+	@include generate();
+
+	@each $breakpoint, $size in $microbe-breakpoints-map {
+		@include microbe-media($size) {
+			&#{$breakpoint + '\\:'} {
+				@include generate();
+			}
+		}
+	}
+}
