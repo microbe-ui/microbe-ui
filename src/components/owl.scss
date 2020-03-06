@@ -1,53 +1,46 @@
 @import '../core';
 
 /// @link https://alistapart.com/article/axiomatic-css-and-lobotomized-owls/
-._owl {
-	$name: $microbe-owl-size-custom-property-name;
-	& > * {
-		@if ($microbe-ie-fallback == false) {
-			#{$name}: auto;
-		}
-		margin-top: 0 !important;
-		margin-bottom: 0 !important;
-	}
-
-	@if ($microbe-ie-fallback == false) {
-		& > * + * {
-			margin-top: var(#{$name}) !important;
-		}
-	}
-
-	@each $space, $value in $microbe-spaces-map {
-		&--#{$space} {
-			@if ($microbe-ie-fallback == false) {
-				& > * {
-					#{$name}: #{$value};
-				}
-			} @else {
-				& > * + * {
-					margin-top: $value !important;
+._ {
+	$property: $microbe-owl-size-custom-property-name;
+	@mixin generate () {
+		@each $space, $value in $microbe-spaces-map {
+			&--#{$space} {
+				@if ($microbe-ie-fallback == false) {
+					& > * {
+						#{$property}: #{$value};
+					}
+				} @else {
+					& > * + * {
+						margin-top: $value !important;
+					}
 				}
 			}
 		}
 	}
-}
 
-@each $breakpoint, $size in $microbe-breakpoints-map {
-	@include microbe-media($size) {
-		._#{$breakpoint + '\\:'}owl {
-			$name: $microbe-owl-size-custom-property-name;
-			@each $space, $value in $microbe-spaces-map {
-				&--#{$space} {
-					@if ($microbe-ie-fallback == false) {
-						& > * {
-							#{$name}: #{$value};
-						}
-					} @else {
-						& > * + * {
-							margin-top: $value !important;
-						}
-					}
-				}
+	&owl {
+		& > * {
+			@if ($microbe-ie-fallback == false) {
+				#{$property}: auto;
+			}
+			margin-top: 0 !important;
+			margin-bottom: 0 !important;
+		}
+
+		@if ($microbe-ie-fallback == false) {
+			& > * + * {
+				margin-top: var(#{$property}) !important;
+			}
+		}
+
+		@include generate();
+	}
+
+	@each $breakpoint, $size in $microbe-breakpoints-map {
+		@include microbe-media($size) {
+			&#{$breakpoint + '\\:'}owl {
+				@include generate();
 			}
 		}
 	}
