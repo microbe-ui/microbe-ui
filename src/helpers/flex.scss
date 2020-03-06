@@ -1,7 +1,7 @@
 @import '../core';
 
 ._ {
-	@mixin generate () {
+	@mixin generate() {
 		&flex {
 			display: flex !important;
 		}

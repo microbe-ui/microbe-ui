@@ -31,7 +31,7 @@
 		}
 	}
 
-	@mixin generate-cell () {
+	@mixin generate-cell() {
 		@for $i from 1 through $positions {
 			$cell-width: percentage($i / $positions);
 			&--#{$i} {

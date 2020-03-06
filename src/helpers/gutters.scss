@@ -54,7 +54,6 @@
 			}
 		}
 
-
 		@if ($name == m) {
 			@include generate($name, $prop, auto, auto);
 			@each $breakpoint, $size in $microbe-breakpoints-map {

@@ -2,7 +2,7 @@
 
 ._ {
 	$property: $microbe-owl-size-custom-property-name;
-	@mixin generate () {
+	@mixin generate() {
 		&text-left {
 			text-align: left !important;
 		}
