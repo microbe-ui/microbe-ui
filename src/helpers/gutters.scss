@@ -1,0 +1,90 @@
+@import '../core';
+
+._ {
+	$property: $microbe-owl-size-custom-property-name;
+	$negative-margins: true;
+
+	@mixin generate($name, $prop, $suffix, $value, $mod: '') {
+		$end: #{'-' + $suffix};
+
+		&#{$name + t + $end} {
+			#{$prop}-top: $value !important;
+		}
+		&#{$name + r + $end} {
+			#{$prop}-right: $value !important;
+		}
+		&#{$name + b + $end} {
+			#{$prop}-bottom: $value !important;
+		}
+		&#{$name + l + $end} {
+			#{$prop}-left: $value !important;
+		}
+
+		$this: &;
+
+		&#{$name + x + $end} {
+			@extend #{$this + $name + r + $end};
+			@extend #{$this + $name + l + $end};
+		}
+
+		&#{$name + y + $end} {
+			@extend #{$this + $name + t + $end};
+			@extend #{$this + $name + b + $end};
+		}
+
+		&#{$name + $end} {
+			@extend #{$this + $name + x + $end};
+			@extend #{$this + $name + y + $end};
+		}
+	}
+
+	$props: (
+		m: margin,
+		p: padding
+	);
+
+	@each $name, $prop in $props {
+		@include generate($name, $prop, none, 0);
+
+		@each $breakpoint, $size in $microbe-breakpoints-map {
+			@include microbe-media($size) {
+				&#{$breakpoint + '\\:'} {
+					@include generate($name, $prop, none, 0);
+				}
+			}
+		}
+
+		@if ($name == m) {
+			@include generate($name, $prop, auto, auto);
+			@each $breakpoint, $size in $microbe-breakpoints-map {
+				@include microbe-media($size) {
+					&#{$breakpoint + '\\:'} {
+						@include generate($name, $prop, auto, auto);
+					}
+				}
+			}
+		}
+
+		@each $space, $value in $microbe-spaces-map {
+			@include generate($name, $prop, $space, $value);
+			@each $breakpoint, $size in $microbe-breakpoints-map {
+				@include microbe-media($size) {
+					&#{$breakpoint + '\\:'} {
+						@include generate($name, $prop, $space, $value);
+					}
+				}
+			}
+
+			@if ($negative-margins AND $value != 0 AND $name == m) {
+				@include generate(n + $name, $prop, $space, $value * -1);
+				@each $breakpoint, $size in $microbe-breakpoints-map {
+					@include microbe-media($size) {
+						&#{$breakpoint + '\\:'} {
+							@include generate(n + $name, $prop, $space, $value * -1);
+						}
+					}
+				}
+			}
+		}
+	}
+}

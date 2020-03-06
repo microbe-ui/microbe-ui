@@ -1,53 +1,44 @@
 @import '../core';
 
-._spacer {
-	$name: $microbe-spacer-size-custom-property-name;
-	@if ($microbe-ie-fallback == false) {
-		#{$name}: auto;
-		margin-left: calc(var(#{$name}) * -1) !important;
-		margin-bottom: calc(var(#{$name}) * -1) !important;
+._ {
+	$property: $microbe-spacer-size-custom-property-name;
+	@mixin generate() {
+		@each $space, $value in $microbe-spaces-map {
+			&--#{$space} {
+				@if ($microbe-ie-fallback == false) {
+					#{$property}: #{$value};
+				} @else {
+					margin-left: #{$value * -1} !important;
+					margin-bottom: #{$value * -1} !important;
 
-		> * {
-			padding-left: var(#{$name}) !important;
-			padding-bottom: var(#{$name}) !important;
-		}
-	}
-
-	@each $space, $value in $microbe-spaces-map {
-		&--#{$space} {
-			@if ($microbe-ie-fallback == false) {
-				#{$name}: #{$value};
-			} @else {
-				margin-left: #{$value * -1} !important;
-				margin-bottom: #{$value * -1} !important;
-
-				> * {
-					padding-left: $value !important;
-					padding-bottom: $value !important;
+					> * {
+						padding-left: $value !important;
+						padding-bottom: $value !important;
+					}
 				}
 			}
 		}
 	}
-}
 
-@each $breakpoint, $size in $microbe-breakpoints-map {
-	@include microbe-media($size) {
-		._#{$breakpoint + '\\:'}spacer {
-			$name: $microbe-spacer-size-custom-property-name;
-			@each $space, $value in $microbe-spaces-map {
-				&--#{$space} {
-					@if ($microbe-ie-fallback == false) {
-						#{$name}: #{$value};
-					} @else {
-						margin-left: #{$value * -1} !important;
-						margin-bottom: #{$value * -1} !important;
+	&spacer {
+		@if ($microbe-ie-fallback == false) {
+			#{$property}: auto;
+			margin-left: calc(var(#{$property}) * -1) !important;
+			margin-bottom: calc(var(#{$property}) * -1) !important;
 
-						> * {
-							padding-left: $value !important;
-							padding-bottom: $value !important;
-						}
-					}
-				}
+			> * {
+				padding-left: var(#{$property}) !important;
+				padding-bottom: var(#{$property}) !important;
+			}
+		}
+
+		@include generate();
+	}
+
+	@each $breakpoint, $size in $microbe-breakpoints-map {
+		@include microbe-media($size) {
+			&#{$breakpoint + '\\:'}spacer {
+				@include generate();
 			}
 		}
 	}

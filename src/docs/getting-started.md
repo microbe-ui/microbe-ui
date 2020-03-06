@@ -30,7 +30,7 @@ $ npm i microbe-ui
 
 ### Core
 
-First at all, нou need to import `microbe-ui` core:
+First at all, you need to import `microbe-ui` core:
 
 ```scss
 @import "~microbe-ui/core";
@@ -49,7 +49,7 @@ Than you can import desired `microbe-ui` components, e.g.:
 
 ### Redefinition of default values
 
-All SCSS microbe-ui variables has `!default` flag. You can easily change default values for [all variables in our API](./api.md#variables). This opportunity allows you to customize `microbe-ui` for your current project.
+All SCSS `microbe-ui` variables has `!default` flag. You can easily change default values for [all variables in our API](./api.md#variables). This opportunity allows you to customize `microbe-ui` for your current project.
 
 > _**Note!** You must re-define variables before import components_
 

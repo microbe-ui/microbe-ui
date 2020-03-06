@@ -1,128 +1,100 @@
 @import '../core';
 
-._module-grid {
+._ {
+	$property: $microbe-module-cell-width-custom-property-name;
 	$columns: $microbe-module-grid-columns-count;
-	@if ($microbe-ie-fallback == false) {
-		#{$microbe-module-cell-width-custom-property-name}: auto;
-	}
-	display: flex;
-	flex-wrap: wrap;
-	list-style: none; // reset ol and ul elements
-	padding: 0;
-	margin: 0;
-
-	@if ($microbe-ie-fallback == false) {
-		& > * {
-			flex-basis: var(#{$microbe-module-cell-width-custom-property-name});
-			width: var(#{$microbe-module-cell-width-custom-property-name});
-			max-width: var(#{$microbe-module-cell-width-custom-property-name});
-		}
-	}
-
-	@for $i from 1 through $columns {
-		$cell-width: percentage($columns / $i / $columns);
-		&--#{$i} {
-			& > * {
-				@if ($microbe-ie-fallback) {
-					@include microbe-flex-cell-width($cell-width);
-				} @else {
-					#{$microbe-module-cell-width-custom-property-name}: #{$cell-width};
-				}
-			}
-		}
-	}
-
-	&--auto {
-		& > * {
-			@if ($microbe-ie-fallback) {
-				@include microbe-flex-cell-width(auto);
-				min-width: 1px;
-			} @else {
-				#{$microbe-module-cell-width-custom-property-name}: auto;
-			}
-		}
-	}
-}
-
-._module-cell {
 	$positions: $microbe-module-cell-positions-count;
-	box-sizing: border-box;
-	list-style: none; // reset li elements
-	min-height: 1px;
-	@if ($microbe-ie-fallback) {
-		min-width: 0;
-	}
 
-	@for $i from 1 through $positions {
-		$cell-width: percentage($i / $positions);
-		&--#{$i} {
-			@if ($microbe-ie-fallback) {
-				@include microbe-flex-cell-width($cell-width);
-			} @else {
-				#{$microbe-module-cell-width-custom-property-name}: #{$cell-width};
-			}
-		}
-	}
-
-	&--auto {
-		@if ($microbe-ie-fallback) {
-			@include microbe-flex-cell-width(auto);
-			min-width: 1px;
-		} @else {
-			#{$microbe-module-cell-width-custom-property-name}: auto;
-		}
-	}
-}
-
-@each $breakpoint, $size in $microbe-breakpoints-map {
-	@include microbe-media($size) {
-		$columns: $microbe-module-grid-columns-count;
-		._#{$breakpoint + '\\:'}module-grid {
-			@for $i from 1 through $columns {
-				$cell-width: percentage($columns / $i / $columns);
-				&--#{$i} {
-					& > * {
-						@if ($microbe-ie-fallback) {
-							@include microbe-flex-cell-width($cell-width);
-						} @else {
-							#{$microbe-module-cell-width-custom-property-name}: #{$cell-width};
-						}
-					}
-				}
-			}
-
-			&--auto {
+	@mixin generate-grid() {
+		@for $i from 1 through $columns {
+			$cell-width: percentage($columns / $i / $columns);
+			&--#{$i} {
 				& > * {
-					@if ($microbe-ie-fallback) {
-						@include microbe-flex-cell-width(auto);
-						min-width: 1px;
-					} @else {
-						#{$microbe-module-cell-width-custom-property-name}: auto;
-					}
-				}
-			}
-		}
-
-		$positions: $microbe-module-cell-positions-count;
-		._#{$breakpoint + '\\:'}module-cell {
-			@for $i from 1 through $positions {
-				$cell-width: percentage($i / $positions);
-				&--#{$i} {
 					@if ($microbe-ie-fallback) {
 						@include microbe-flex-cell-width($cell-width);
 					} @else {
-						#{$microbe-module-cell-width-custom-property-name}: #{$cell-width};
+						#{$property}: #{$cell-width};
 					}
 				}
 			}
+		}
 
-			&--auto {
+		&--auto {
+			& > * {
 				@if ($microbe-ie-fallback) {
 					@include microbe-flex-cell-width(auto);
 					min-width: 1px;
 				} @else {
-					#{$microbe-module-cell-width-custom-property-name}: auto;
+					#{$property}: auto;
 				}
+			}
+		}
+	}
+
+	@mixin generate-cell() {
+		@for $i from 1 through $positions {
+			$cell-width: percentage($i / $positions);
+			&--#{$i} {
+				@if ($microbe-ie-fallback) {
+					@include microbe-flex-cell-width($cell-width);
+				} @else {
+					#{$property}: #{$cell-width};
+				}
+			}
+		}
+
+		&--auto {
+			@if ($microbe-ie-fallback) {
+				@include microbe-flex-cell-width(auto);
+				min-width: 1px;
+			} @else {
+				#{$property}: auto;
+			}
+		}
+	}
+
+	&module-grid {
+		@if ($microbe-ie-fallback == false) {
+			#{$property}: auto;
+		}
+		display: flex;
+		flex-wrap: wrap;
+		list-style: none; // reset ol and ul elements
+		padding: 0;
+		margin: 0;
+
+		@if ($microbe-ie-fallback == false) {
+			& > * {
+				flex-basis: var(#{$property});
+				width: var(#{$property});
+				max-width: var(#{$property});
+			}
+		}
+
+		@include generate-grid();
+	}
+
+	&module-cell {
+		box-sizing: border-box;
+		list-style: none; // reset li elements
+		min-height: 1px;
+		@if ($microbe-ie-fallback) {
+			min-width: 0;
+		}
+
+		@include generate-cell();
+	}
+
+	@each $breakpoint, $size in $microbe-breakpoints-map {
+		@include microbe-media($size) {
+			$columns: $microbe-module-grid-columns-count;
+			&#{$breakpoint + '\\:'}module-grid {
+				@include generate-grid();
+			}
+
+			$positions: $microbe-module-cell-positions-count;
+			&#{$breakpoint + '\\:'}module-cell {
+				@include generate-cell();
 			}
 		}
 	}
