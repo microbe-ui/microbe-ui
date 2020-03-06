@@ -2,14 +2,16 @@
 
 /// @link https://alistapart.com/article/axiomatic-css-and-lobotomized-owls/
 ._owl {
+	$name: $microbe-owl-size-custom-property-name;
 	& > * {
+		@if ($microbe-ie-fallback == false) {
+			#{$name}: auto;
+		}
 		margin-top: 0 !important;
 		margin-bottom: 0 !important;
 	}
 
-	$name: $microbe-owl-size-custom-property-name;
 	@if ($microbe-ie-fallback == false) {
-		#{$name}: auto;
 		& > * + * {
 			margin-top: var(#{$name}) !important;
 		}
@@ -18,7 +20,9 @@
 	@each $space, $value in $microbe-spaces-map {
 		&--#{$space} {
 			@if ($microbe-ie-fallback == false) {
-				#{$name}: #{$value};
+				& > * {
+					#{$name}: #{$value};
+				}
 			} @else {
 				& > * + * {
 					margin-top: $value !important;
@@ -35,7 +39,9 @@
 			@each $space, $value in $microbe-spaces-map {
 				&--#{$space} {
 					@if ($microbe-ie-fallback == false) {
-						#{$name}: #{$value};
+						& > * {
+							#{$name}: #{$value};
+						}
 					} @else {
 						& > * + * {
 							margin-top: $value !important;
