@@ -5,9 +5,9 @@
 ## Table of content
 
 1. [Functions](#functions)
-    - [microbe-strip-units](#microbe-strip-units)
-    - [microbe-em](#microbe-em)
-    - [microbe-rem](#microbe-rem)
+    - [microbe-strip-units()](#microbe-strip-units)
+    - [microbe-em()](#microbe-em)
+    - [microbe-rem()](#microbe-rem)
 1. [Mixins](#mixins)
     - [microbe-absolute-center](#microbe-absolute-center)
     - [microbe-absolute-gap](#microbe-absolute-gap)
