@@ -48,13 +48,14 @@ First at all, you need to import `microbe-ui` core:
 
 ### Components for your project
 
-Than you can import desired `microbe-ui` components, e.g.:
+Than you can import desired `microbe-ui` components and helpers, e.g.:
 
 ```scss
 @import "~microbe-ui/core";
 // add "Module grid" and "Spacer" components
 @import "~microbe-ui/components/module-grid";
 @import "~microbe-ui/components/spacer";
+@import "~microbe-ui/helpers/gutters";
 ```
 
 ### Redefinition of default values
@@ -76,6 +77,7 @@ $microbe-space-xxl: microbe-rem(60) // change "xxl" space (default value: `micro
 // add "Module grid" and "Spacer" components
 @import "~microbe-ui/components/module-grid";
 @import "~microbe-ui/components/spacer";
+@import "~microbe-ui/helpers/gutters";
 ```
 
 

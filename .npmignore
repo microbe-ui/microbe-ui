@@ -1,10 +1,11 @@
 /.cache
 /.idea
 /.github
-/node_modules
 /dist
-/gulpfile.js
-/index.html
 /docs
-/src/bundle.scss
+/node_modules
+/src/bundle-*.scss
 /src/docs
+.htaccess
+gulpfile.js
+index.html
