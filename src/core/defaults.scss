@@ -87,19 +87,12 @@ $microbe-breakpoint-lg: 1280px !default;
 $microbe-breakpoint-xl: 1420px !default;
 
 /// Breakpoint screen _xxl_ (xx-large).
-/// Expected value: `1660px`
 /// @group core/defaults#microbe-breakpoint-xxl
-$microbe-breakpoint-xxl: NULL !default;
+$microbe-breakpoint-xxl: 1660px !default;
 
 /// Breakpoint screen _hd_ (full-hd).
-/// Expected value: `1980px`
 /// @group core/defaults#microbe-breakpoint-hd
-$microbe-breakpoint-hd: NULL !default;
-
-/// Breakpoint screen _2k_.
-/// Expected value: `2048px`
-/// @group core/defaults#microbe-breakpoint-2k
-$microbe-breakpoint-2k: NULL !default;
+$microbe-breakpoint-hd: 1980px !default;
 
 /// Map with filtered breakpoint variables
 /// @group core/defaults#microbe-breakpoints-map
@@ -110,14 +103,14 @@ $microbe-breakpoints-map: _microbe-generate-vars-map(breakpoints);
 // -----------------------------------------------------------------------------
 
 /// Columns count
-/// @group core/defaults#microbe-module-grid-columns-count
+/// @group core/defaults#microbe-module-grid-cols
 /// @type {Number}
-$microbe-module-grid-columns-count: 12 !default;
+$microbe-module-grid-cols: 12 !default;
 
 /// Cell positions count
-/// @group core/defaults#microbe-module-cell-positions-count
+/// @group core/defaults#microbe-module-cell-span
 /// @type {Number}
-$microbe-module-cell-positions-count: 12 !default;
+$microbe-module-cell-span: 12 !default;
 
 /// CSS Custom property name for cell width value
 /// @group core/defaults#microbe-module-cell-width-custom-property-name

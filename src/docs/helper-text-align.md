@@ -1,7 +1,7 @@
 # Helper `text-align`
 
-![](https://img.shields.io/badge/CSS_size-2.1_KB-blue)
-![](https://img.shields.io/badge/gzip-570_B-blue)
+![](https://img.shields.io/badge/CSS_size-2.6_KB-blue)
+![](https://img.shields.io/badge/gzip-599_B-magenta)
 
 `insertNavHome`
 

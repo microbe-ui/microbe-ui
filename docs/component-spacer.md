@@ -1,7 +1,7 @@
 # Component `spacer`
 
-![](https://img.shields.io/badge/CSS_size-4.5_KB-blue)
-![](https://img.shields.io/badge/gzip-806_B-blue)
+![](https://img.shields.io/badge/CSS_size-5.6_KB-blue)
+![](https://img.shields.io/badge/gzip-862_B-magenta)
 
 
 
