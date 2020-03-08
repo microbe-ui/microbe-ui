@@ -1,7 +1,7 @@
 # Component `owl`
 
-![](https://img.shields.io/badge/CSS_size-4.2_KB-blue)
-![](https://img.shields.io/badge/gzip-778_B-blue)
+![](https://img.shields.io/badge/CSS_size-5.3_KB-blue)
+![](https://img.shields.io/badge/gzip-833_B-magenta)
 
 
 

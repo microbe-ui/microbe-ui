@@ -109,7 +109,6 @@ Available list of spaces:
 `insertVariableRow=core/defaults#microbe-breakpoint-xl`
 `insertVariableRow=core/defaults#microbe-breakpoint-xxl`
 `insertVariableRow=core/defaults#microbe-breakpoint-hd`
-`insertVariableRow=core/defaults#microbe-breakpoint-2k`
 
 #### Breakpoints map
 
@@ -138,8 +137,8 @@ __`$microbe-ie-fallback`__ | default value: `insertVariableValue=core/defaults#m
 ```
 
 `insertVariablesTable`
-`insertVariableRow=core/defaults#microbe-module-grid-columns-count`
-`insertVariableRow=core/defaults#microbe-module-cell-positions-count`
+`insertVariableRow=core/defaults#microbe-module-grid-cols`
+`insertVariableRow=core/defaults#microbe-module-cell-span`
 `insertVariableRow=core/defaults#microbe-module-cell-width-custom-property-name`
 
 `insertNavDivider=api`

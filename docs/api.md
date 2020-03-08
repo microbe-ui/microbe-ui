@@ -391,9 +391,8 @@ Available list of spaces:
 | `$microbe-breakpoint-df` | Breakpoint screen _df_ (default) | `1024px` | default |
 | `$microbe-breakpoint-lg` | Breakpoint screen _lg_ (large) | `1280px` | default |
 | `$microbe-breakpoint-xl` | Breakpoint screen _xl_ (x-large) | `1420px` | default |
-| `$microbe-breakpoint-xxl` | Breakpoint screen _xxl_ (xx-large). Expected value: `1660px` | `NULL` | default |
-| `$microbe-breakpoint-hd` | Breakpoint screen _hd_ (full-hd). Expected value: `1980px` | `NULL` | default |
-| `$microbe-breakpoint-2k` | Breakpoint screen _2k_. Expected value: `2048px` | `NULL` | default |
+| `$microbe-breakpoint-xxl` | Breakpoint screen _xxl_ (xx-large). | `1660px` | default |
+| `$microbe-breakpoint-hd` | Breakpoint screen _hd_ (full-hd). | `1980px` | default |
 
 #### Breakpoints map
 
@@ -438,8 +437,8 @@ Use degradation for IE support
 
 | Name | Description | Value | Scope |
 | --- | --- | --- | --- |
-| `$microbe-module-grid-columns-count` | Columns count | `12` | default |
-| `$microbe-module-cell-positions-count` | Cell positions count | `12` | default |
+| `$microbe-module-grid-cols` | Columns count | `12` | default |
+| `$microbe-module-cell-span` | Cell positions count | `12` | default |
 | `$microbe-module-cell-width-custom-property-name` | CSS Custom property name for cell width value | `--microbe-module-cell-width` | default |
 
 

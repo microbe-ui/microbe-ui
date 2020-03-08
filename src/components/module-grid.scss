@@ -2,12 +2,12 @@
 
 ._ {
 	$property: $microbe-module-cell-width-custom-property-name;
-	$columns: $microbe-module-grid-columns-count;
-	$positions: $microbe-module-cell-positions-count;
+	$cols: $microbe-module-grid-cols;
+	$span: $microbe-module-cell-span;
 
 	@mixin generate-grid() {
-		@for $i from 1 through $columns {
-			$cell-width: percentage($columns / $i / $columns);
+		@for $i from 1 through $cols {
+			$cell-width: percentage($cols / $i / $cols);
 			&--#{$i} {
 				& > * {
 					@if ($microbe-ie-fallback) {
@@ -32,8 +32,8 @@
 	}
 
 	@mixin generate-cell() {
-		@for $i from 1 through $positions {
-			$cell-width: percentage($i / $positions);
+		@for $i from 1 through $span {
+			$cell-width: percentage($i / $span);
 			&--#{$i} {
 				@if ($microbe-ie-fallback) {
 					@include microbe-flex-cell-width($cell-width);
@@ -87,12 +87,12 @@
 
 	@each $breakpoint, $size in $microbe-breakpoints-map {
 		@include microbe-media($size) {
-			$columns: $microbe-module-grid-columns-count;
+			$cols: $microbe-module-grid-cols;
 			&#{$breakpoint + '\\:'}module-grid {
 				@include generate-grid();
 			}
 
-			$positions: $microbe-module-cell-positions-count;
+			$span: $microbe-module-cell-span;
 			&#{$breakpoint + '\\:'}module-cell {
 				@include generate-cell();
 			}
