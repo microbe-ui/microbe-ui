@@ -4,6 +4,7 @@
 
 const fs = require('fs');
 const gulp = require('gulp');
+const argv = require('yargs').argv;
 const sass = require('gulp-sass');
 const notify = require('gulp-notify');
 const postcss = require('gulp-postcss');
@@ -17,7 +18,7 @@ const mobileFirst = require('sort-css-media-queries');
 sass.compiler = require('node-sass');
 const renderSass = () => {
 	return gulp
-		.src('./src/bundle.scss')
+		.src('./src/bundle-*.scss')
 		.pipe(
 			sass({
 				outputStyle: 'expanded',
@@ -41,8 +42,10 @@ const renderSass = () => {
 
 const renderSassIncremental = () => {
 	const bs = require('browser-sync').create();
+	const proxy = argv.proxy;
 	bs.init({
-		server: true,
+		server: proxy === undefined,
+		proxy: proxy ? `http://${proxy}` : undefined,
 		files: [
 			{
 				match: ['./index.html', './src/docs/assets/style.css'],
