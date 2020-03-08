@@ -9,6 +9,6 @@
     - [spacer](./component-spacer.md)
     - [owl](./component-owl.md)
 1. Helpers:
-    - [module-grid](./helper-flex.md)
-    - [spacer](./helper-gutters.md)
-    - [owl](./helper-text-align.md)
+    - [flex](./helper-flex.md)
+    - [gutters](./helper-gutters.md)
+    - [text-align](./helper-text-align.md)
