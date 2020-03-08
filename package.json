@@ -1,6 +1,6 @@
 {
   "name": "microbe-ui",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "Narrowly targeted specific UI library",
   "main": "index.js",
   "scripts": {
@@ -12,6 +12,12 @@
     "stylelint": "stylelint \"src/**/*.{scss,css}\"",
     "docs": "gulp sass-doc && gulp md-doc"
   },
+  "files": [
+    "src/components",
+    "src/core",
+    "src/helpers",
+    "src/core.scss"
+  ],
   "stylelint": {
     "extends": [
       "stylelint-config-recommended-scss",
