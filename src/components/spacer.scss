@@ -13,7 +13,7 @@
 
 					> * {
 						padding-left: $value !important;
-						padding-bottom: $value !important;
+						margin-bottom: $value !important;
 					}
 				}
 			}
@@ -28,7 +28,7 @@
 
 			> * {
 				padding-left: var(#{$property}) !important;
-				padding-bottom: var(#{$property}) !important;
+				margin-bottom: var(#{$property}) !important;
 			}
 		}
 
