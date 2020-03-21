@@ -43,7 +43,7 @@ $ npm i microbe-ui
 First at all, you need to import `microbe-ui` core:
 
 ```scss
-@import "~microbe-ui/core";
+@import "~microbe-ui/src/core";
 ```
 
 ### Components for your project
@@ -51,11 +51,11 @@ First at all, you need to import `microbe-ui` core:
 Than you can import desired `microbe-ui` components and helpers, e.g.:
 
 ```scss
-@import "~microbe-ui/core";
+@import "~microbe-ui/src/core";
 // add "Module grid" and "Spacer" components
-@import "~microbe-ui/components/module-grid";
-@import "~microbe-ui/components/spacer";
-@import "~microbe-ui/helpers/gutters";
+@import "~microbe-ui/src/components/module-grid";
+@import "~microbe-ui/src/components/spacer";
+@import "~microbe-ui/src/helpers/gutters";
 ```
 
 ### Redefinition of default values
@@ -67,7 +67,7 @@ All SCSS `microbe-ui` variables has `!default` flag. You can easily change defau
 _Example:_
 
 ```scss
-@import "~microbe-ui/core";
+@import "~microbe-ui/src/core";
 
 // re-define before import components
 $microbe-breakpoint-sm: 40rem; // change "md" breakpoint value (default value: `568px`) 
@@ -75,9 +75,9 @@ $microbe-breakpoint-md: 800px; // change "md" breakpoint value (default value: `
 $microbe-space-xxl: microbe-rem(60) // change "xxl" space (default value: `microbe-rem(48)`)
 
 // add "Module grid" and "Spacer" components
-@import "~microbe-ui/components/module-grid";
-@import "~microbe-ui/components/spacer";
-@import "~microbe-ui/helpers/gutters";
+@import "~microbe-ui/src/components/module-grid";
+@import "~microbe-ui/src/components/spacer";
+@import "~microbe-ui/src/helpers/gutters";
 ```
 
 

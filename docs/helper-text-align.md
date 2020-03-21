@@ -12,8 +12,8 @@
 ## Import
 
 ```scss
-@import "~microbe-ui/core";
-@import "~microbe-ui/heleprs/text-align";
+@import "~microbe-ui/src/core";
+@import "~microbe-ui/src/heleprs/text-align";
 ```
 
 ## Description

@@ -12,8 +12,8 @@
 ## Import
 
 ```scss
-@import "~microbe-ui/core";
-@import "~microbe-ui/components/module-grid";
+@import "~microbe-ui/src/core";
+@import "~microbe-ui/src/components/module-grid";
 ```
 
 ## Description

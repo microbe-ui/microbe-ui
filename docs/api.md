@@ -491,7 +491,7 @@ Enable `!important` qualifier
 
 ```scss
 // import component directly
-@import "~microbe-ui/components/module-grid";
+@import "~microbe-ui/src/components/module-grid";
 ```
 
 | Name | Description | Value | Scope |
@@ -512,7 +512,7 @@ Enable `!important` qualifier
 
 ```scss
 // import component directly
-@import "~microbe-ui/components/owl";
+@import "~microbe-ui/src/components/owl";
 ```
 
 | Name | Description | Value | Scope |
@@ -534,7 +534,7 @@ https://alistapart.com/article/axiomatic-css-and-lobotomized-owls/
 
 ```scss
 // import component directly
-@import "~microbe-ui/components/spacer";
+@import "~microbe-ui/src/components/spacer";
 ```
 
 | Name | Description | Value | Scope |

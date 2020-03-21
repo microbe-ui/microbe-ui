@@ -148,7 +148,7 @@ __`$microbe-important-qualifier`__ | default value: `insertVariableValue=core/de
 
 ```scss
 // import component directly
-@import "~microbe-ui/components/module-grid";
+@import "~microbe-ui/src/components/module-grid";
 ```
 
 `insertVariablesTable`
@@ -162,7 +162,7 @@ __`$microbe-important-qualifier`__ | default value: `insertVariableValue=core/de
 
 ```scss
 // import component directly
-@import "~microbe-ui/components/owl";
+@import "~microbe-ui/src/components/owl";
 ```
 
 `insertVariablesTable`
@@ -177,7 +177,7 @@ https://alistapart.com/article/axiomatic-css-and-lobotomized-owls/
 
 ```scss
 // import component directly
-@import "~microbe-ui/components/spacer";
+@import "~microbe-ui/src/components/spacer";
 ```
 
 `insertVariablesTable`

@@ -8,8 +8,8 @@
 ## Import
 
 ```scss
-@import "~microbe-ui/core";
-@import "~microbe-ui/heleprs/flex";
+@import "~microbe-ui/src/core";
+@import "~microbe-ui/src/heleprs/flex";
 ```
 
 ## Description

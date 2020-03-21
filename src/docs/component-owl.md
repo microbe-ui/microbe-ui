@@ -8,8 +8,8 @@
 ## Import
 
 ```scss
-@import "~microbe-ui/core";
-@import "~microbe-ui/components/owl";
+@import "~microbe-ui/src/core";
+@import "~microbe-ui/src/components/owl";
 ```
 
 ## Description

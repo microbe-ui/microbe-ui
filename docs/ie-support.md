@@ -18,14 +18,14 @@ _**Warning!** Degradation methodology will increase CSS code size (about twice)!
 _Example:_
 
 ```scss
-@import "~microbe-ui/core";
+@import "~microbe-ui/src/core";
 
 // enable IE support
 $microbe-ie-fallback: true;
 
 // add "Module grid" and "Spacer" components
-@import "~microbe-ui/components/module-grid";
-@import "~microbe-ui/components/spacer";
+@import "~microbe-ui/src/components/module-grid";
+@import "~microbe-ui/src/components/spacer";
 ```
 
 
