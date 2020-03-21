@@ -1,5 +1,5 @@
 @import './functions/rem';
-@import './functions/generate-vars-map';
+@import './utils/microbe-generate-vars-map';
 
 // -----------------------------------------------------------------------------
 // IE
@@ -9,6 +9,14 @@
 /// - CSS Custom properties will be transformed to CSS values
 /// @group core/defaults#microbe-ie-fallback
 $microbe-ie-fallback: false !default;
+
+// -----------------------------------------------------------------------------
+// Important qualifier
+// -----------------------------------------------------------------------------
+
+/// Enable `!important` qualifier
+/// @group core/defaults#microbe-important-qualifier
+$microbe-important-qualifier: true !default;
 
 // -----------------------------------------------------------------------------
 // Spaces

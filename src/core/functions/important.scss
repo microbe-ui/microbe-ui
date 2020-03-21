@@ -1,0 +1,26 @@
+/// If `$microbe-important-qualifier` is enabled - will add `!important` qualifier to CSS value
+/// @group core/functions#microbe-important
+/// @param {*} $value - any CSS value
+/// @return {*} CSS value with/or `!important` qualifier
+/// @requires $microbe-important-qualifier
+/// @example
+///   $microbe-important-qualifier: true;
+///   div {
+///         background:  microbe-important(none); // none !important;
+///         font-size:   microbe-important(microbe-em(24px)); // 1.5em !important;
+///         margin-left: microbe-important(calc(#{microbe-em(24px)} * -1)); // -1.5em !important;
+///   }
+/// @example
+///   $microbe-important-qualifier: false;
+///   div {
+///         background:  microbe-important(none); // none;
+///         font-size:   microbe-important(microbe-em(24px)); // 1.5em;
+///         margin-left: microbe-important(calc(#{microbe-em(24px)} * -1)); // -1.5em;
+///   }
+@function microbe-important($value) {
+	@if ($microbe-important-qualifier == true) {
+		@return $value !important;
+	} @else {
+		@return $value;
+	}
+}

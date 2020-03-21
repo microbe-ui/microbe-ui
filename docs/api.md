@@ -9,9 +9,10 @@
 ## Table of content
 
 1. [Functions](#functions)
-    - [microbe-strip-units()](#microbe-strip-units)
     - [microbe-em()](#microbe-em)
+    - [microbe-important()](#microbe-important)
     - [microbe-rem()](#microbe-rem)
+    - [microbe-strip-units()](#microbe-strip-units)
 1. [Mixins](#mixins)
     - [microbe-absolute-center](#microbe-absolute-center)
     - [microbe-absolute-gap](#microbe-absolute-gap)
@@ -21,7 +22,8 @@
 1. [Variables](#variables)
     - [Spaces](#spaces)
     - [Breakpoints](#breakpoints)
-    - [IE Fallback](#ie-fallback)
+    - [IE fallback](#ie-fallback)
+    - [`!important` Qualifier](#important-qualifier)
 1. [Components](#components)
     - [Module Grid](#module-grid)
     - [Owl](#owl)
@@ -30,36 +32,6 @@
 ---
 
 ## Functions
-
-### `microbe-strip-units()`
-
-Get `unitless` value (trim units)
-
-
-##### Parameters
-
-| Name | Description | Type | Default value |
-| --- | --- | --- | --- |
-| `value` | --- | `Size` | --- |
-
-##### Returns
-
-`Number` - trimmed value
-
-##### Examples
-
-```scss
-microbe-strip-units(10px) //  10
-microbe-strip-units(20rem) // 20
-microbe-strip-units(5vw) //   5
-```
-
----
-
-[🔙 _Home_](./index.md) | [🔝 _Table of content_](#api)
-
----
-
 
 ### `microbe-em()`
 
@@ -93,6 +65,48 @@ microbe-em(24, 32) // .75em
 ---
 
 
+### `microbe-important()`
+
+If `$microbe-important-qualifier` is enabled - will add `!important` qualifier to CSS value
+
+
+##### Parameters
+
+| Name | Description | Type | Default value |
+| --- | --- | --- | --- |
+| `value` | any CSS value | `*` | --- |
+
+##### Returns
+
+`*` - CSS value with/or `!important` qualifier
+
+##### Examples
+
+```scss
+$microbe-important-qualifier: true;
+div {
+      background:  microbe-important(none); // none !important;
+      font-size:   microbe-important(microbe-em(24px)); // 1.5em !important;
+      margin-left: microbe-important(calc(#{microbe-em(24px)} * -1)); // -1.5em !important;
+}
+```
+
+```scss
+$microbe-important-qualifier: false;
+div {
+      background:  microbe-important(none); // none;
+      font-size:   microbe-important(microbe-em(24px)); // 1.5em;
+      margin-left: microbe-important(calc(#{microbe-em(24px)} * -1)); // -1.5em;
+}
+```
+
+---
+
+[🔙 _Home_](./index.md) | [🔝 _Table of content_](#api)
+
+---
+
+
 ### `microbe-rem()`
 
 Convert a pixel value to the `rem` value
@@ -116,6 +130,36 @@ microbe-rem(16) // 1rem
 microbe-rem(4px) // 0.25rem
 microbe-rem(20, 20) // 1rem
 microbe-rem(40, 20px) // 2rem
+```
+
+---
+
+[🔙 _Home_](./index.md) | [🔝 _Table of content_](#api)
+
+---
+
+
+### `microbe-strip-units()`
+
+Get `unitless` value (trim units)
+
+
+##### Parameters
+
+| Name | Description | Type | Default value |
+| --- | --- | --- | --- |
+| `value` | --- | `Size` | --- |
+
+##### Returns
+
+`Number` - trimmed value
+
+##### Examples
+
+```scss
+microbe-strip-units(10px) //  10
+microbe-strip-units(20rem) // 20
+microbe-strip-units(5vw) //   5
 ```
 
 ---
@@ -410,12 +454,27 @@ All spaces, that not equal to `false` - are gathered to one map variable `$micro
 ---
 
 
-### IE Fallback
+### IE fallback
 
 __`$microbe-ie-fallback`__ | default value: `false`
 
 Use degradation for IE support
 - CSS Custom properties will be transformed to CSS values
+
+
+
+---
+
+[🔙 _Home_](./index.md) | [🔝 _Table of content_](#api)
+
+---
+
+
+### `!important` qualifier
+
+__`$microbe-important-qualifier`__ | default value: `true`
+
+Enable `!important` qualifier
 
 
 

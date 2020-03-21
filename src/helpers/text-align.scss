@@ -4,19 +4,19 @@
 	$property: $microbe-owl-size-custom-property-name;
 	@mixin generate() {
 		&text-left {
-			text-align: left !important;
+			text-align: microbe-important(left);
 		}
 
 		&text-right {
-			text-align: right !important;
+			text-align: microbe-important(right);
 		}
 
 		&text-center {
-			text-align: center !important;
+			text-align: microbe-important(center);
 		}
 
 		&text-justify {
-			text-align: justify !important;
+			text-align: microbe-important(justify);
 		}
 	}
 

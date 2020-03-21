@@ -5,9 +5,10 @@
 ## Table of content
 
 1. [Functions](#functions)
-    - [microbe-strip-units()](#microbe-strip-units)
     - [microbe-em()](#microbe-em)
+    - [microbe-important()](#microbe-important)
     - [microbe-rem()](#microbe-rem)
+    - [microbe-strip-units()](#microbe-strip-units)
 1. [Mixins](#mixins)
     - [microbe-absolute-center](#microbe-absolute-center)
     - [microbe-absolute-gap](#microbe-absolute-gap)
@@ -17,7 +18,8 @@
 1. [Variables](#variables)
     - [Spaces](#spaces)
     - [Breakpoints](#breakpoints)
-    - [IE Fallback](#ie-fallback)
+    - [IE fallback](#ie-fallback)
+    - [`!important` Qualifier](#important-qualifier)
 1. [Components](#components)
     - [Module Grid](#module-grid)
     - [Owl](#owl)
@@ -27,19 +29,24 @@
 
 ## Functions
 
-### `microbe-strip-units()`
-
-`insertMixinFn=core/functions#microbe-strip-units`
-`insertNavDivider=api`
-
 ### `microbe-em()`
 
 `insertMixinFn=core/functions#microbe-em`
 `insertNavDivider=api`
 
+### `microbe-important()`
+
+`insertMixinFn=core/functions#microbe-important`
+`insertNavDivider=api`
+
 ### `microbe-rem()`
 
 `insertMixinFn=core/functions#microbe-rem`
+`insertNavDivider=api`
+
+### `microbe-strip-units()`
+
+`insertMixinFn=core/functions#microbe-strip-units`
 `insertNavDivider=api`
 
 ## Mixins
@@ -119,11 +126,19 @@ All spaces, that not equal to `false` - are gathered to one map variable `$micro
 
 `insertNavDivider=api`
 
-### IE Fallback
+### IE fallback
 
 __`$microbe-ie-fallback`__ | default value: `insertVariableValue=core/defaults#microbe-ie-fallback`
 
 `insertVariableDescription=core/defaults#microbe-ie-fallback`
+
+`insertNavDivider=api`
+
+### `!important` qualifier
+
+__`$microbe-important-qualifier`__ | default value: `insertVariableValue=core/defaults#microbe-important-qualifier`
+
+`insertVariableDescription=core/defaults#microbe-important-qualifier`
 
 `insertNavDivider=api`
 
