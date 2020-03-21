@@ -8,16 +8,16 @@
 		$end: #{'-' + $suffix};
 
 		&#{$name + t + $end} {
-			#{$prop}-top: $value !important;
+			#{$prop}-top: microbe-important($value);
 		}
 		&#{$name + r + $end} {
-			#{$prop}-right: $value !important;
+			#{$prop}-right: microbe-important($value);
 		}
 		&#{$name + b + $end} {
-			#{$prop}-bottom: $value !important;
+			#{$prop}-bottom: microbe-important($value);
 		}
 		&#{$name + l + $end} {
-			#{$prop}-left: $value !important;
+			#{$prop}-left: microbe-important($value);
 		}
 
 		$this: &;

@@ -1,3 +1,4 @@
+/// @access private
 @function _microbe-generate-vars-map($type) {
 	$temp: ();
 	@if ($type == spaces) {

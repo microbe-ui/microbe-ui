@@ -8,12 +8,12 @@
 				@if ($microbe-ie-fallback == false) {
 					#{$property}: #{$value};
 				} @else {
-					margin-left: #{$value * -1} !important;
-					margin-bottom: #{$value * -1} !important;
+					margin-left: microbe-important(#{$value * -1});
+					margin-bottom: microbe-important(#{$value * -1});
 
 					> * {
-						padding-left: $value !important;
-						margin-bottom: $value !important;
+						padding-left: microbe-important($value);
+						margin-bottom: microbe-important($value);
 					}
 				}
 			}
@@ -23,12 +23,12 @@
 	&spacer {
 		@if ($microbe-ie-fallback == false) {
 			#{$property}: auto;
-			margin-left: calc(var(#{$property}) * -1) !important;
-			margin-bottom: calc(var(#{$property}) * -1) !important;
+			margin-left: microbe-important(calc(var(#{$property}) * -1));
+			margin-bottom: microbe-important(calc(var(#{$property}) * -1));
 
 			> * {
-				padding-left: var(#{$property}) !important;
-				margin-bottom: var(#{$property}) !important;
+				padding-left: microbe-important(var(#{$property}));
+				margin-bottom: microbe-important(var(#{$property}));
 			}
 		}
 

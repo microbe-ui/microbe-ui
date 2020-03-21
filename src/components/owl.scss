@@ -12,7 +12,7 @@
 					}
 				} @else {
 					& > * + * {
-						margin-top: $value !important;
+						margin-top: microbe-important($value);
 					}
 				}
 			}
@@ -24,13 +24,13 @@
 			@if ($microbe-ie-fallback == false) {
 				#{$property}: auto;
 			}
-			margin-top: 0 !important;
-			margin-bottom: 0 !important;
+			margin-top: microbe-important(0);
+			margin-bottom: microbe-important(0);
 		}
 
 		@if ($microbe-ie-fallback == false) {
 			& > * + * {
-				margin-top: var(#{$property}) !important;
+				margin-top: microbe-important(var(#{$property}));
 			}
 		}
 

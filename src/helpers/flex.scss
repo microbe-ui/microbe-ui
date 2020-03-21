@@ -3,103 +3,103 @@
 ._ {
 	@mixin generate() {
 		&flex {
-			display: flex !important;
+			display: microbe-important(flex);
 		}
 
 		&items-start {
-			align-items: flex-start !important;
+			align-items: microbe-important(flex-start);
 		}
 
 		&items-end {
-			align-items: flex-end !important;
+			align-items: microbe-important(flex-end);
 		}
 
 		&items-center {
-			align-items: center !important;
+			align-items: microbe-important(center);
 		}
 
 		&items-stretch {
-			align-items: stretch !important;
+			align-items: microbe-important(stretch);
 		}
 
 		&items-baseline {
-			align-items: stretch !important;
+			align-items: microbe-important(stretch);
 		}
 
 		&justify-start {
-			justify-content: flex-start !important;
+			justify-content: microbe-important(flex-start);
 		}
 
 		&justify-end {
-			justify-content: flex-end !important;
+			justify-content: microbe-important(flex-end);
 		}
 
 		&justify-center {
-			justify-content: center !important;
+			justify-content: microbe-important(center);
 		}
 
 		&justify-between {
-			justify-content: space-between !important;
+			justify-content: microbe-important(space-between);
 		}
 
 		&justify-around {
-			justify-content: space-around !important;
+			justify-content: microbe-important(space-around);
 		}
 
 		&self-start {
-			align-self: flex-start !important;
+			align-self: microbe-important(flex-start);
 		}
 
 		&self-end {
-			align-self: flex-end !important;
+			align-self: microbe-important(flex-end);
 		}
 
 		&self-center {
-			align-self: center !important;
+			align-self: microbe-important(center);
 		}
 
 		&self-stretch {
-			align-self: stretch !important;
+			align-self: microbe-important(stretch);
 		}
 
 		&flex-wrap {
-			flex-wrap: wrap !important;
+			flex-wrap: microbe-important(wrap);
 		}
 
 		&flex-nowrap {
-			flex-wrap: nowrap !important;
+			flex-wrap: microbe-important(nowrap);
 		}
 
 		&flex-column {
-			flex-direction: column !important;
+			flex-direction: microbe-important(column);
 		}
 
 		&flex-column-reverse {
-			flex-direction: column-reverse !important;
+			flex-direction: microbe-important(column-reverse);
 		}
 
 		&flex-row {
-			flex-direction: row !important;
+			flex-direction: microbe-important(row);
 		}
 
 		&flex-row-reverse {
-			flex-direction: row-reverse !important;
+			flex-direction: microbe-important(row-reverse);
 		}
 
 		&flex-grow {
-			flex-grow: 1 !important;
+			flex-grow: microbe-important(1);
 		}
 
 		&flex-nogrow {
-			flex-grow: 0 !important;
+			flex-grow: microbe-important(0);
 		}
 
 		&flex-shrink {
-			flex-shrink: 1 !important;
+			flex-shrink: microbe-important(1);
 		}
 
 		&flex-noshrink {
-			flex-shrink: 0 !important;
+			flex-shrink: microbe-important(0);
 		}
 	}
 
