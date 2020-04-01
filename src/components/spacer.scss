@@ -2,6 +2,8 @@
 
 ._ {
 	$property: $microbe-spacer-size-custom-property-name;
+	$container: $microbe-spacer-classname-for-container;
+
 	@mixin generate() {
 		@each $space, $value in $microbe-spaces-map {
 			&--#{$space} {
@@ -20,7 +22,7 @@
 		}
 	}
 
-	&spacer {
+	&#{$container} {
 		@if ($microbe-ie-fallback == false) {
 			#{$property}: auto;
 			margin-left: microbe-important(calc(var(#{$property}) * -1));
@@ -37,7 +39,7 @@
 
 	@each $breakpoint, $size in $microbe-breakpoints-map {
 		@include microbe-media($size) {
-			&#{$breakpoint + '\\:'}spacer {
+			&#{$breakpoint + '\\:' + $container} {
 				@include generate();
 			}
 		}
