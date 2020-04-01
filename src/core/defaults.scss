@@ -110,6 +110,16 @@ $microbe-breakpoints-map: _microbe-generate-vars-map(breakpoints);
 // Module Grid
 // -----------------------------------------------------------------------------
 
+/// CSS class name for component container
+/// @group core/defaults#microbe-module-grid-classname-for-container
+/// @type {String}
+$microbe-module-grid-classname-for-container: 'grid' !default;
+
+/// CSS class name for component cell
+/// @group core/defaults#microbe-module-grid-classname-for-cell
+/// @type {String}
+$microbe-module-grid-classname-for-cell: 'cell' !default;
+
 /// Columns count
 /// @group core/defaults#microbe-module-grid-cols
 /// @type {Number}
@@ -129,6 +139,11 @@ $microbe-module-cell-width-custom-property-name: --microbe-module-cell-width !de
 // Spacer
 // -----------------------------------------------------------------------------
 
+/// CSS class name for component cell
+/// @group core/defaults#microbe-spacer-classname-for-container
+/// @type {String}
+$microbe-spacer-classname-for-container: 'spacer' !default;
+
 /// CSS Custom property name for spacer size
 /// @group core/defaults#microbe-spacer-size-custom-property-name
 /// @type {String}
@@ -137,6 +152,11 @@ $microbe-spacer-size-custom-property-name: --microbe-spacer-size !default;
 // -----------------------------------------------------------------------------
 // Owl
 // -----------------------------------------------------------------------------
+
+/// CSS class name for component cell
+/// @group core/defaults#microbe-owl-classname-for-container
+/// @type {String}
+$microbe-owl-classname-for-container: 'owl' !default;
 
 /// CSS Custom property name for "owl" module size
 /// @group core/defaults#microbe-owl-size-custom-property-name
