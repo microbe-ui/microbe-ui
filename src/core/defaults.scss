@@ -60,7 +60,7 @@ $microbe-space-hg: microbe-rem(80) !default;
 
 /// Map with filtered space variables
 /// @group core/defaults#microbe-spaces-map
-$microbe-spaces-map: _microbe-generate-vars-map(spaces);
+$microbe-spaces-map: _microbe-generate-vars-map(spaces) !default;
 
 // -----------------------------------------------------------------------------
 // Breakpoints
@@ -104,7 +104,7 @@ $microbe-breakpoint-hd: 1980px !default;
 
 /// Map with filtered breakpoint variables
 /// @group core/defaults#microbe-breakpoints-map
-$microbe-breakpoints-map: _microbe-generate-vars-map(breakpoints);
+$microbe-breakpoints-map: _microbe-generate-vars-map(breakpoints) !default;
 
 // -----------------------------------------------------------------------------
 // Module Grid

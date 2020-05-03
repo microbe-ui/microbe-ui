@@ -1,6 +1,6 @@
 {
   "name": "microbe-ui",
-  "version": "2.0.0-rc",
+  "version": "2.1.0",
   "description": "Narrowly targeted specific UI library",
   "main": "index.js",
   "scripts": {
@@ -13,6 +13,7 @@
     "docs": "gulp sass-doc && gulp md-doc"
   },
   "files": [
+    "dist",
     "src/components",
     "src/core",
     "src/helpers",
