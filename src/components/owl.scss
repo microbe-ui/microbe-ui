@@ -3,6 +3,7 @@
 /// @link https://alistapart.com/article/axiomatic-css-and-lobotomized-owls/
 ._ {
 	$property: $microbe-owl-size-custom-property-name;
+	$container: $microbe-owl-classname-for-container;
 	@mixin generate() {
 		@each $space, $value in $microbe-spaces-map {
 			&--#{$space} {
@@ -19,7 +20,7 @@
 		}
 	}
 
-	&owl {
+	&#{$container} {
 		& > * {
 			@if ($microbe-ie-fallback == false) {
 				#{$property}: auto;
@@ -39,7 +40,7 @@
 
 	@each $breakpoint, $size in $microbe-breakpoints-map {
 		@include microbe-media($size) {
-			&#{$breakpoint + '\\:'}owl {
+			&#{$breakpoint + '\\:' + $container} {
 				@include generate();
 			}
 		}

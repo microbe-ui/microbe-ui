@@ -4,6 +4,8 @@
 	$property: $microbe-module-cell-width-custom-property-name;
 	$cols: $microbe-module-grid-cols;
 	$span: $microbe-module-cell-span;
+	$container: $microbe-module-grid-classname-for-container;
+	$cell: $microbe-module-grid-classname-for-cell;
 
 	@mixin generate-grid() {
 		@for $i from 1 through $cols {
@@ -53,7 +55,7 @@
 		}
 	}
 
-	&module-grid {
+	&#{$container} {
 		@if ($microbe-ie-fallback == false) {
 			#{$property}: auto;
 		}
@@ -74,7 +76,7 @@
 		@include generate-grid();
 	}
 
-	&module-cell {
+	&#{$cell} {
 		box-sizing: border-box;
 		list-style: none; // reset li elements
 		min-height: 1px;
@@ -88,12 +90,12 @@
 	@each $breakpoint, $size in $microbe-breakpoints-map {
 		@include microbe-media($size) {
 			$cols: $microbe-module-grid-cols;
-			&#{$breakpoint + '\\:'}module-grid {
+			&#{$breakpoint + '\\:' + $container} {
 				@include generate-grid();
 			}
 
 			$span: $microbe-module-cell-span;
-			&#{$breakpoint + '\\:'}module-cell {
+			&#{$breakpoint + '\\:' + $cell} {
 				@include generate-cell();
 			}
 		}
