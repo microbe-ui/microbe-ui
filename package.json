@@ -58,7 +58,7 @@
     "gulp-notify": "^3.2.0",
     "gulp-postcss": "^8.0.0",
     "gulp-sass": "^4.0.2",
-    "node-sass": "^4.13.1",
+    "node-sass": "^7.0.0",
     "postcss-sort-media-queries": "^1.31.21",
     "prettier": "^1.19.1",
     "sassdoc": "^2.7.1",
