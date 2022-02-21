@@ -1,3 +1,4 @@
+@use "sass:math";
 @import '../core';
 
 ._ {
@@ -9,7 +10,7 @@
 
 	@mixin generate-grid() {
 		@for $i from 1 through $cols {
-			$cell-width: percentage($cols / $i / $cols);
+			$cell-width: percentage(math.div(math.div($cols, $i), $cols));
 			&--#{$i} {
 				& > * {
 					@if ($microbe-ie-fallback) {
@@ -35,7 +36,7 @@
 
 	@mixin generate-cell() {
 		@for $i from 1 through $span {
-			$cell-width: percentage($i / $span);
+			$cell-width: percentage(math.div($i, $span));
 			&--#{$i} {
 				@if ($microbe-ie-fallback) {
 					@include microbe-flex-cell-width($cell-width);

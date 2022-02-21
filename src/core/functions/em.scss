@@ -1,3 +1,4 @@
+@use "sass:math";
 @import './strip-units';
 
 /// Convert a pixel value to the `em` value
@@ -17,5 +18,5 @@
 	@if not unitless($base) {
 		$base: microbe-strip-units($base);
 	}
-	@return ($value / $base) * 1em;
+	@return math.div($value, $base) * 1em;
 }

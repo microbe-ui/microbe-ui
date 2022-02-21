@@ -1,3 +1,4 @@
+@use "sass:math";
 /// @group core/mixins#microbe-absolute-square
 /// @param {Number} $percent
 /// @param {Bool} $set-absolute [true]
@@ -19,8 +20,8 @@
 	@if ($set-absolute) {
 		position: absolute;
 	}
-	top: (100% - $percent) / 2;
-	left: (100% - $percent) / 2;
+	top: math.div((100% - $percent), 2);
+	left: math.div((100% - $percent), 2);
 	width: $percent;
 	height: $percent;
 }

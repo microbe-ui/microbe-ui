@@ -1,3 +1,5 @@
+@use "sass:math";
+
 /// Get `unitless` value (trim units)
 /// @group core/functions#microbe-strip-units
 /// @param {Size} $value
@@ -8,7 +10,7 @@
 ///   microbe-strip-units(5vw) //   5
 @function microbe-strip-units($value) {
 	@if type-of($value) == 'number' and not unitless($value) {
-		@return $value / ($value * 0 + 1);
+		@return math.div($value, ($value * 0 + 1));
 	} @else {
 		@return $value;
 	}
